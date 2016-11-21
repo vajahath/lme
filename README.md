@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
 
-**`console.log` ing done right, beautifully.**
+**`console.log` ging done right, beautifully.**
 
 
 You don't have to write the 13 char length `console.log()` anymore. Try:
