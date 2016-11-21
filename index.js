@@ -36,9 +36,9 @@ let m = {
 	// highlight
 	h: function(msg) {
 		if (typeof(msg) == 'object') {
-			console.log(chalk.bgCyan.white('\n' + JSON.stringify(msg, null, 2)));
+			console.log(chalk.bgCyan.black('\n' + JSON.stringify(msg, null, 2)));
 		} else {
-			console.log(chalk.bgCyan(msg));
+			console.log(chalk.bgCyan.black(msg));
 		}
 	},
 
