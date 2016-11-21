@@ -55,7 +55,7 @@ lme.w("Attention! Thank you for your attention."); // used for logging warnings.
 | `w`           | warning    | for warnings like output   | `lme.w("hi");`        |
 | `h`           | highlight  | for highlighting an output | `lme.h("hi");`        |
 
-- **where `message` can be either `strings` or `objects`.** *(note that javascript treats `arrays` as `objects`.)*
+- **where `message` can be `string`/`float`/`int`/`objects`.** *(note that javascript treats `arrays` as `objects`.)*
 
 More configurations are on its way.<br>
 If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).<br>
