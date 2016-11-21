@@ -1,9 +1,9 @@
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
 
-**`console.log`ing done right.**
+# `console.log`ing done right, beautifully.
 
 
-You don't have to write the 13 char length `console.log()` anymore.
+You don't have to write the 13 char length `console.log()` anymore. Try:
 
 ```javascript
 lme.d("hello world");
@@ -21,7 +21,7 @@ lme.d("hello world");
 
 ## Install
 
-```shell
+```bash
 npm install --save lme
 ```
 
@@ -29,7 +29,7 @@ npm install --save lme
 
 ### Syntax
 
-`lme.`<status>`(`message`);`
+`lme.<status>(message);`
 
 ### Example
 ```javascript
@@ -43,7 +43,7 @@ lme.w("Attention! Thank you for your attention."); // used for logging warnings.
 
 ### APIs
 
-**Syntax :** `lme.`<status>`(`message`);`
+**Syntax :** `lme.<status>(message);`
 
 - **where `<status>` can have the following values:**
 
@@ -57,8 +57,8 @@ lme.w("Attention! Thank you for your attention."); // used for logging warnings.
 
 - **where `message` can be either `strings` or `objects`.** *(note that javascript treats `arrays` as `objects`.)*
 
-More configurations are on its way.
-If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).
+More configurations are on its way.<br>
+If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).<br>
 Enjoy.
 
 ## License
