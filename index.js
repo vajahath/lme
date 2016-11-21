@@ -38,24 +38,10 @@ let m = {
 		if (typeof(msg) == 'object') {
 			console.log(chalk.bgCyan.black('\n' + JSON.stringify(msg, null, 2)));
 		} else {
-			console.log(chalk.bgCyan.bold(msg));
+			console.log(chalk.bgCyan.black(msg));
 		}
 	},
 
 }
 
 module.exports = m;
-
-// sample tests
-
-// m.e({ya:"this", me:"ts"});
-// m.w({ya:"this", me:"ts"});
-// m.h({ya:"this", me:"ts"});
-// m.s({ya:"this", me:"ts"});
-// m.d({ya:"this", me:"ts"});
-// m.d('\n');
-// m.e('hello');
-// m.w('hello');
-// m.s('hello');
-// m.d('hello');
-// m.h('hello');
