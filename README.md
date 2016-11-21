@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
 
-**`console.log`ing done right. Kids like colors, me too.**
+**`console.log`ing done right.**
 
 
 You don't have to write the 13 char length `console.log()` anymore.
@@ -10,8 +10,10 @@ lme.d("hello world");
 ```
 
 ## Why `lme` *( logme )*
-- Simpler to use than `console.log()` or `console.log(chalk.red("hi"));`
+- Simpler to use than `console.log()` or even `console.log(chalk.red("hi"));`
+- Automatically expands `objects` and `arrays`. So that, you don't have to use `JSON.stringify()` anymore.
 - Clean and semantically focused.
+- Actively maintained.
 - Consistent design for errors, warnings, successes etc.
 
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/obj-img.png)
@@ -55,14 +57,9 @@ lme.w("Attention! Thank you for your attention."); // used for logging warnings.
 
 - **where `message` can be either `strings` or `objects`.** *(note that javascript treats `arrays` as `objects`.)*
 
-> More configurations are on its way.
-> Enjoy.
-
-## Support
-
-
-## Related
-- [chalk](https://www.npmjs.com/package/chalk)
+More configurations are on its way.
+If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).
+Enjoy.
 
 ## License
 MIT &copy; [Vajahath Ahmed](https://mycolorpad.blogspot.in)
