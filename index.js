@@ -4,7 +4,7 @@ let m = {
 	// default
 	d: function(msg) {
 		if (typeof(msg) == 'object') {
-			console.log(chalk.white('\n'+JSON.stringify(msg, null, 2)));
+			console.log(chalk.white('\n' + JSON.stringify(msg, null, 2)));
 		} else {
 			console.log(chalk.white(msg));
 		}
@@ -12,7 +12,7 @@ let m = {
 	// err
 	e: function(msg) {
 		if (typeof(msg) == 'object') {
-			console.log(chalk.bgRed.white('\n'+JSON.stringify(msg, null, 2)));
+			console.log(chalk.bgRed.white('\n' + JSON.stringify(msg, null, 2)));
 		} else {
 			console.log(chalk.bgRed(msg));
 		}
@@ -20,7 +20,7 @@ let m = {
 	// success
 	s: function(msg) {
 		if (typeof(msg) == 'object') {
-			console.log(chalk.bold.green('\n'+JSON.stringify(msg, null, 2)));
+			console.log(chalk.bold.green('\n' + JSON.stringify(msg, null, 2)));
 		} else {
 			console.log(chalk.bold.green(msg));
 		}
@@ -28,7 +28,7 @@ let m = {
 	// warning
 	w: function(msg) {
 		if (typeof(msg) == 'object') {
-			console.log(chalk.bgYellow.red('\n'+JSON.stringify(msg, null, 2)));
+			console.log(chalk.bgYellow.red('\n' + JSON.stringify(msg, null, 2)));
 		} else {
 			console.log(chalk.bgYellow.red.bold(msg));
 		}
@@ -36,7 +36,7 @@ let m = {
 	// highlight
 	h: function(msg) {
 		if (typeof(msg) == 'object') {
-			console.log(chalk.bgCyan.black('\n'+JSON.stringify(msg, null, 2)));
+			console.log(chalk.bgCyan.black('\n' + JSON.stringify(msg, null, 2)));
 		} else {
 			console.log(chalk.bgCyan.bold(msg));
 		}
@@ -44,7 +44,7 @@ let m = {
 
 }
 
-module.exports =  m;
+module.exports = m;
 
 // sample tests
 
