@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
 
-# `console.log`ing done right, beautifully.
+**`console.log` ing done right, beautifully.**
 
 
 You don't have to write the 13 char length `console.log()` anymore. Try:
@@ -55,6 +55,7 @@ lme.w("Attention! Thank you for your attention."); // used for logging warnings.
 | `w`           | warning    | for warnings like output   | `lme.w("hi");`        |
 | `h`           | highlight  | for highlighting an output | `lme.h("hi");`        |
 
+<br>
 - **where `message` can be `string`/`float`/`int`/`objects`.** *(note that javascript treats `arrays` as `objects`.)*
 
 More configurations are on its way.<br>
