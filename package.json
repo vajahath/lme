@@ -1,0 +1,29 @@
+{
+  "name": "lme",
+  "version": "1.0.0",
+  "description": "Simply and beautifully log to console.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vajahath/lme.git"
+  },
+  "keywords": [
+    "console.log",
+    "colors",
+    "chalk",
+    "beautiful",
+    "output"
+  ],
+  "author": "Vajahath Ahmed <vajuoff.1@gmail.com> (http://twitter.com/vajahath7)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vajahath/lme/issues"
+  },
+  "homepage": "https://github.com/vajahath/lme#readme",
+  "dependencies": {
+    "chalk": "^1.1.3"
+  }
+}
