@@ -103,8 +103,13 @@ lme.wline("#", 50);
 
 <br>
 <br>
+
 More configurations are on its way.<br>
-If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).<br>
+
+If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).
+
+<br>
+
 Enjoy.
 
 ## License
