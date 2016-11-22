@@ -45,3 +45,6 @@ Thumbs.db
 # databases
 #############
 homeworkDB
+
+# lint: jshint config 
+.jshintrc
