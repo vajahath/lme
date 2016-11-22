@@ -28,9 +28,9 @@ let m = {
 	// warning
 	w: function(msg) {
 		if (typeof(msg) == 'object') {
-			console.log(chalk.bgYellow.red('\n' + JSON.stringify(msg, null, 2)));
+			console.log(chalk.bgYellow.black('\n' + JSON.stringify(msg, null, 2)));
 		} else {
-			console.log(chalk.bgYellow.red.bold(msg));
+			console.log(chalk.bgYellow.black(msg));
 		}
 	},
 	// highlight
