@@ -1,4 +1,6 @@
-// sample tests
+//////////////////
+// sample tests //
+//////////////////
 /**
 
 run:
@@ -8,24 +10,50 @@ node test.js
 
 const lme = require('./index');
 
-lme.e({ya:"this", me:"ts"});
+// objects
+lme.d({ kity: "is pinky", fluffy: "is funny!" });
+lme.s({ kity: "is pinky", fluffy: "is funny!" });
+lme.w({ kity: "is pinky", fluffy: "is funny!" });
+lme.e({ kity: "is pinky", fluffy: "is funny!" });
+lme.h({ kity: "is pinky", fluffy: "is funny!" });
+lme.i({ kity: "is pinky", fluffy: "is funny!" });
+lme.t({ kity: "is pinky", fluffy: "is funny!" });
+lme.d('\n');
 
-lme.w({ya:"this", me:"ts"});
-lme.h({ya:"this", me:"ts"});
-lme.s({ya:"this", me:"ts"});
-lme.d({ya:"this", me:"ts"});
+// strings
+lme.d('cherry is sweet!');
+lme.s('cherry is sweet!');
+lme.w('cherry is sweet!');
+lme.e('cherry is sweet!');
+lme.h('cherry is sweet!');
+lme.i('cherry is sweet!');
+lme.t('cherry is sweet!');
 lme.d('\n');
-lme.e('hello');
-lme.w('hello');
-lme.s('hello');
-lme.d('hello');
-lme.h('hello');
-lme.d('\n');
-// lme.line('*', 150);
-lme.dline('*',30);
-lme.line('*',12);
-lme.eline("#");
-lme.wline({yu:1});
-lme.sline("/");
-lme.hline({"o":9});
-// lme.eline({ye:"ki"});
+
+// lines
+lme.line();
+lme.line('*', 10);
+
+lme.dline();
+lme.dline('*', 10);
+
+lme.sline();
+lme.sline('*', 10);
+
+lme.wline();
+lme.wline('*', 10);
+
+lme.eline();
+lme.eline('*', 10);
+
+lme.hline();
+lme.hline('*', 10);
+
+// error-ed outputs for lines
+lme.i("\nerror-ed outputs");
+lme.line({ yu: 1 });
+lme.dline({ yu: 1 });
+lme.sline({ yu: 1 });
+lme.wline({ yu: 1 });
+lme.eline({ yu: 1 });
+lme.hline({ yu: 1 });
