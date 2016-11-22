@@ -93,14 +93,14 @@ lme.wline("#", 50);
 
 ### APIs for drawing lines
 
-| status            | name            | when to use                | example               |
-| ----------------- | --------------- | -------------------------- | --------------------- |
-| `line`            | default         | default output             | `lme.line();`         |
-| `dline`           | same as line    | default output             | `lme.d("hi");`        |
-| `sline`           | successe        | on success output          | `lme.s("hi");`        |
-| `eline`           | error           | on error-ed output         | `lme.e("hi");`        |
-| `wline`           | warning         | for warnings like output   | `lme.w("hi");`        |
-| `hline`           | highlight       | for highlighting an output | `lme.h("hi");`        |
+| status            | name            | when to use                | example                   |
+| ----------------- | --------------- | -------------------------- | ------------------------- |
+| `line`            | default         | default output             | `lme.line();`             |
+| `dline`           | same as line    | default output             | `lme.dline("hi");`        |
+| `sline`           | successe        | on success output          | `lme.sline("hi");`        |
+| `eline`           | error           | on error-ed output         | `lme.eline("hi");`        |
+| `wline`           | warning         | for warnings like output   | `lme.wline("hi");`        |
+| `hline`           | highlight       | for highlighting an output | `lme.hline("hi");`        |
 
 <br>
 <br>
@@ -112,6 +112,25 @@ If you wish to file any feature/bugs, mention it on [issues](https://github.com/
 <br>
 
 Enjoy.
+
+## Change log
+
+- v1.1.3
+    + bug fixes
+    + docs update
+- v1.1.2
+    + bug fixes
+    + docs update
+- v1.1.1
+    + bug fixes
+    + docs update
+- v1.1.0
+    + adds support for drawing lines
+    + docs update
+- versions < 1.1.0
+    + adds support for semantic outputs.
+    + bug fixes
+    + doc updates
 
 ## License
 MIT &copy; [Vajahath Ahmed](https://mycolorpad.blogspot.in)
