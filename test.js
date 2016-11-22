@@ -1,4 +1,11 @@
 // sample tests
+/**
+
+run:
+node test.js
+
+*/
+
 const lme = require('./index');
 
 lme.e({ya:"this", me:"ts"});
