@@ -19,6 +19,8 @@ lme.d("hello world");
 
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/obj-img.png)
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/str-img.png)
+![](https://raw.githubusercontent.com/vajahath/lme/master/media/lines.png)
+
 
 ## Install
 
@@ -55,7 +57,7 @@ lme.sline() // used to draw lines in success theme.
 | status        | name       | when to use                | example               |
 | ------------- | ---------- | -------------------------- | --------------------- |
 | `d`           | default    | default output             | `lme.d("hi");`        |
-| `s`           | successes  | on success output          | `lme.s("hi");`        |
+| `s`           | success    | on success output          | `lme.s("hi");`        |
 | `e`           | error      | on error-ed output         | `lme.e("hi");`        |
 | `w`           | warning    | for warnings like output   | `lme.w("hi");`        |
 | `h`           | highlight  | for highlighting an output | `lme.h("hi");`        |
@@ -93,7 +95,7 @@ lme.wline("#", 50);
 | ----------------- | --------------- | -------------------------- | --------------------- |
 | `line`            | default         | default output             | `lme.line();`         |
 | `dline`           | same as line    | default output             | `lme.d("hi");`        |
-| `sline`           | successes       | on success output          | `lme.s("hi");`        |
+| `sline`           | successe        | on success output          | `lme.s("hi");`        |
 | `eline`           | error           | on error-ed output         | `lme.e("hi");`        |
 | `wline`           | warning         | for warnings like output   | `lme.w("hi");`        |
 | `hline`           | highlight       | for highlighting an output | `lme.h("hi");`        |
