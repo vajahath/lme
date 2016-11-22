@@ -20,3 +20,6 @@ lme.w('hello');
 lme.s('hello');
 lme.d('hello');
 lme.h('hello');
+lme.d('\n');
+lme.line({ye:"ki"});
+lme.eline({ye:"ki"});

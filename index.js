@@ -1,6 +1,6 @@
-const chalk = require('chalk');
+var chalk = require('chalk');
 
-let m = {
+var m = {
 	// default
 	d: function(msg) {
 		if (typeof(msg) == 'object') {
@@ -14,7 +14,7 @@ let m = {
 		if (typeof(msg) == 'object') {
 			console.log(chalk.bgRed.white('\n' + JSON.stringify(msg, null, 2)));
 		} else {
-			console.log(chalk.bgRed(msg));
+			console.log(chalk.bgRed.white(msg));
 		}
 	},
 	// success
@@ -41,6 +41,27 @@ let m = {
 			console.log(chalk.bgCyan.black(msg));
 		}
 	},
+	// lines
+	line: function(char = '-', length = 30) {
+		if (typeof(char) == 'object') {
+			this.e("ERROR: the line() function can't accept objects!");
+			char = '-'
+		} else {
+			var theLine = "";
+			for (var i = 0; i < length; i++) {
+				theLine = theLine + char;
+			};
+		}
+		console.log(theLine);
+	},
+	eline: function(char = '-', length = 30) {
+		var theLine = "";
+		for (var i = 0; i < length; i++) {
+			theLine = theLine + char;
+		};
+		console.log(chalk.bgRed.white(theLine));
+	}
+
 
 }
 
