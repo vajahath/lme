@@ -22,7 +22,7 @@ lme.d("hello world");
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/lines.png)
 
 
-## Install
+## Install / Update
 
 ```bash
 npm install --save lme
@@ -43,6 +43,7 @@ lme.e("Snap! something went wrong."); // used for logging errors.
 lme.s("Oh yeah!"); // used for logging success.
 lme.w("Attention! Thank you for your attention."); // used for logging warnings.
 
+// lines
 lme.line() // used to draw lines
 lme.eline() // used to draw lines in error theme.
 lme.sline() // used to draw lines in success theme.
