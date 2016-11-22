@@ -42,6 +42,23 @@ let m = {
 		}
 	},
 
-}
+	//info
+	i: function (msg) {
+		if(typeof(msg) == 'object') {
+			console.info(chalk.bold.cyan('\n' + JSON.stringify(msg, null, 2)));
+		} else {
+			console.info(chalk.bold.cyan(msg));
+		}
+	},
+
+	//trace:
+	t: function (msg) {
+		if(typeof(msg) == 'object') {
+			console.trace(chalk.bgGreen.white('\n' + JSON.stringify(msg, null, 2)));
+		} else {
+			console.trace(chalk.bgGreen.white(msg));
+		}
+	}
+};
 
 module.exports = m;
