@@ -62,6 +62,8 @@ lme.sline() // used to draw lines in success theme.
 | `e`           | error      | on error-ed output         | `lme.e("hi");`        |
 | `w`           | warning    | for warnings like output   | `lme.w("hi");`        |
 | `h`           | highlight  | for highlighting an output | `lme.h("hi");`        |
+| `i`           | info       | for info like output       | `lme.i("hi");`        |
+| `t`           | trace      | for tracing stack          | `lme.t("hi");`        |
 
 <br>
 
