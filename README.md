@@ -11,7 +11,7 @@ lme.d("hello world");
 
 ## Why `lme` *( logme )*
 - Simpler to use than `console.log()` or even `console.log(chalk.red("hi"));`
-- Draw lines with just a single function, `lme.line()`.
+- **Draw lines** with just a single function, [`lme.line()`](#drawing-lines-with-lmeline).
 - Automatically expands `objects` and `arrays`. So that, you don't have to use `JSON.stringify()` anymore.
 - Clean and semantically focused.
 - Actively maintained.
@@ -48,7 +48,7 @@ lme.eline() // used to draw lines in error theme.
 lme.sline() // used to draw lines in success theme.
 ```
 
-### APIs
+# APIs
 
 **Syntax :** `lme.<status>(message);`
 
@@ -80,6 +80,7 @@ You can prefix `d`, `s`, `e`, `w`, `h` to the `line()` function to obtain the co
 | `length`        | `integer`  | length of the line                                          | 30               |
 
 <br>
+
 ### Examples
 
 ```javascript
