@@ -11,6 +11,7 @@ lme.d("hello world");
 
 ## Why `lme` *( logme )*
 - Simpler to use than `console.log()` or even `console.log(chalk.red("hi"));`
+- Draw lines with just a single function, `lme.line()`.
 - Automatically expands `objects` and `arrays`. So that, you don't have to use `JSON.stringify()` anymore.
 - Clean and semantically focused.
 - Actively maintained.
@@ -39,6 +40,10 @@ lme.d("my kitty is pinky!"); // default style, used for anonymous outputs.
 lme.e("Snap! something went wrong."); // used for logging errors.
 lme.s("Oh yeah!"); // used for logging success.
 lme.w("Attention! Thank you for your attention."); // used for logging warnings.
+
+lme.line() // used to draw lines
+lme.eline() // used to draw lines in error theme.
+lme.sline() // used to draw lines in success theme.
 ```
 
 ### APIs
@@ -59,6 +64,42 @@ lme.w("Attention! Thank you for your attention."); // used for logging warnings.
 
 **where `message` can be `string` / `float` / `int` / `objects`.** *(note that javascript treats `arrays` as `objects`.)*
 
+## Drawing lines with `lme.line()`
+
+**Syntax :** `lme.line(character, length)`.
+
+You can prefix `d`, `s`, `e`, `w`, `h` to the `line()` function to obtain the corresponding color scheme for your line. You can also simply use `lme.line()` which has some default values as described below.
+
+### Argument List
+
+| argument        | type       | purpose                                                     | default value    |
+| --------------- | ---------- | ----------------------------------------------------------- | ---------------- |
+| `character`     | `string`   | determines which character should be used for drawing lines | `-`              |
+| `length`        | `integer`  | length of the line                                          | 30               |
+
+<br>
+### Examples
+
+```javascript
+lme.line();
+lme.eline("^");
+lme.sline("@", 12);
+lme.wline("#", 50);
+```
+
+### APIs for drawing lines
+
+| status            | name            | when to use                | example               |
+| ----------------- | --------------- | -------------------------- | --------------------- |
+| `line`            | default         | default output             | `lme.line();`         |
+| `dline`           | same as line    | default output             | `lme.d("hi");`        |
+| `sline`           | successes       | on success output          | `lme.s("hi");`        |
+| `eline`           | error           | on error-ed output         | `lme.e("hi");`        |
+| `wline`           | warning         | for warnings like output   | `lme.w("hi");`        |
+| `hline`           | highlight       | for highlighting an output | `lme.h("hi");`        |
+
+<br>
+<br>
 More configurations are on its way.<br>
 If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).<br>
 Enjoy.
