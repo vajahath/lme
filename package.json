@@ -15,7 +15,9 @@
     "colors",
     "chalk",
     "beautiful",
-    "output"
+    "output",
+    "console",
+    "log"
   ],
   "author": "Vajahath Ahmed <vajuoff.1@gmail.com> (http://twitter.com/vajahath7)",
   "license": "MIT",
