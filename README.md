@@ -102,11 +102,11 @@ lme.wline("#", 50);
 | status            | name            | when to use                | example                   |
 | ----------------- | --------------- | -------------------------- | ------------------------- |
 | `line`            | default         | default output             | `lme.line();`             |
-| `dline`           | same as line    | default output             | `lme.dline("hi");`        |
-| `sline`           | successe        | on success output          | `lme.sline("hi");`        |
-| `eline`           | error           | on error-ed output         | `lme.eline("hi");`        |
-| `wline`           | warning         | for warnings like output   | `lme.wline("hi");`        |
-| `hline`           | highlight       | for highlighting an output | `lme.hline("hi");`        |
+| `dline`           | same as line    | default output             | `lme.dline("*", 5);`      |
+| `sline`           | successe        | on success output          | `lme.sline("*");`         |
+| `eline`           | error           | on error-ed output         | `lme.eline("/", 50);`     |
+| `wline`           | warning         | for warnings like output   | `lme.wline("*");`         |
+| `hline`           | highlight       | for highlighting an output | `lme.hline("*");`         |
 
 <br>
 <br>
