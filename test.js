@@ -21,13 +21,13 @@ lme.t({ kity: "is pinky", fluffy: "is funny!" });
 lme.d('\n');
 
 // strings
-lme.d('cherry is sweet!');
-lme.s('cherry is sweet!');
-lme.w('cherry is sweet!');
-lme.e('cherry is sweet!');
-lme.h('cherry is sweet!');
-lme.i('cherry is sweet!');
-lme.t('cherry is sweet!');
+lme.d('mango is sweet!');
+lme.s('mango is sweet!');
+lme.w('mango is sweet!');
+lme.e('mango is sweet!');
+lme.h('mango is sweet!');
+lme.i('mango is sweet!');
+lme.t('mango is sweet!');
 lme.d('\n');
 
 // lines
