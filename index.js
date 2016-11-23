@@ -57,11 +57,11 @@ var m = {
 	t: function(msg) {
 		if (typeof(msg) == 'object') {
 			console.log(chalk.green("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BEGIN"));
-			console.trace(chalk.bgGreen.white('\n' + JSON.stringify(msg, null, 2)));
+			console.trace(chalk.green('\n' + JSON.stringify(msg, null, 2)));
 			console.log(chalk.green(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END\n"));
 		} else {
 			console.log(chalk.green("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BEGIN"));
-			console.trace(chalk.bgGreen.white(msg));
+			console.trace(chalk.green(msg));
 			console.log(chalk.green(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END\n"));
 		}
 	},
