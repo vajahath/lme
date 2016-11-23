@@ -24,7 +24,7 @@ lme.d('\n');
 lme.d('cherry is sweet!');
 lme.s('cherry is sweet!');
 lme.w('cherry is sweet!');
-lme.e('cherry is sweet!');
+lme.e('tomato is bitter!');
 lme.h('cherry is sweet!');
 lme.i('cherry is sweet!');
 lme.t('cherry is sweet!');
