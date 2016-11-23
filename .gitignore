@@ -42,5 +42,6 @@ bower_components/
 ehthumbs.db
 Thumbs.db
 
+
 # lint: jshint config 
 .jshintrc

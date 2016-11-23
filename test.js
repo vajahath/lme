@@ -57,3 +57,5 @@ lme.sline({ yu: 1 });
 lme.wline({ yu: 1 });
 lme.eline({ yu: 1 });
 lme.hline({ yu: 1 });
+
+lme.i('test finished');
