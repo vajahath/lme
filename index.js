@@ -1,3 +1,5 @@
+'use strict';
+
 var chalk = require('chalk');
 
 var m = {
@@ -71,7 +73,13 @@ var m = {
 	///////////
 
 	// default
-	line: function(char = '-', length = 30) {
+	line: function(char, length) {
+		if(!char) {
+			char = '-';
+		};
+		if(!length) {
+			length = 30;
+		};
 		if (typeof(char) == 'object') {
 			this.e("ERROR: the line() function can't accept objects!");
 			char = '-';
@@ -87,7 +95,13 @@ var m = {
 		}
 	},
 	// default - another
-	dline: function(char = '-', length = 30) {
+	dline: function(char, length) {
+		if(!char) {
+			char = '-';
+		};
+		if(!length) {
+			length = 30;
+		};
 		if (typeof(char) == 'object') {
 			this.e("ERROR: the line() functions can't accept objects!");
 			char = '-';
@@ -103,7 +117,13 @@ var m = {
 		}
 	},
 	// success
-	sline: function(char = '-', length = 30) {
+	sline: function(char, length) {
+		if(!char) {
+			char = '-';
+		};
+		if(!length) {
+			length = 30;
+		};
 		if (typeof(char) == 'object') {
 			this.e("ERROR: the line() functions can't accept objects!");
 			char = '-';
@@ -119,7 +139,13 @@ var m = {
 		}
 	},
 	// warning
-	wline: function(char = '-', length = 30) {
+	wline: function(char, length) {
+		if(!char) {
+			char = '-';
+		};
+		if(!length) {
+			length = 30;
+		};
 		if (typeof(char) == 'object') {
 			this.e("ERROR: the line() functions can't accept objects!");
 			char = '-';
@@ -135,7 +161,13 @@ var m = {
 		}
 	},
 	// error
-	eline: function(char = '-', length = 30) {
+	eline: function(char, length) {
+		if(!char) {
+			char = '-';
+		};
+		if(!length) {
+			length = 30;
+		};
 		if (typeof(char) == 'object') {
 			this.e("ERROR: the line() functions can't accept objects!");
 			char = '-';
@@ -151,7 +183,13 @@ var m = {
 		}
 	},
 	// highlight
-	hline: function(char = '-', length = 30) {
+	hline: function(char, length) {
+		if(!char) {
+			char = '-';
+		};
+		if(!length) {
+			length = 30;
+		};
 		if (typeof(char) == 'object') {
 			this.e("ERROR: the line() functions can't accept objects!");
 			char = '-';
