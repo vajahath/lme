@@ -9,6 +9,10 @@ You don't have to write the 13 char long `console.log()` anymore. Try:
 lme.d("hello world");
 ```
 
+
+> version 1.2.0 is out with more features and bug fixes. [Update](#install--update) to get most out of `lme`. See [change log](#change-log) for more details.
+
+
 ## Why `lme` *( logme )*
 - Simpler to use than `console.log()` or even `console.log(chalk.red("hi"));`
 - **Draw lines** with just a single function, [`lme.line()`](#drawing-lines-with-lmeline).
@@ -117,19 +121,26 @@ Enjoy.
 
 ## Change log
 
-- v1.1.3
+- **v1.2.0**
+    + Adds support for `trace`.
+    + Adds support for `info`. (*thanks [@amandeepmittal](https://github.com/amandeepmittal)*)
+    + Bug fixes
+        * `line()` functions now support older versions of node.
+        * Changed some colors for better accessibility on Windows and Linux machines.
+        * Fixed some minor quirks.
+- **v1.1.3**
     + bug fixes
     + docs update
-- v1.1.2
+- **v1.1.2**
     + bug fixes
     + docs update
-- v1.1.1
+- **v1.1.1**
     + bug fixes
     + docs update
-- v1.1.0
+- **v1.1.0**
     + adds support for drawing lines
     + docs update
-- versions < 1.1.0
+- **versions < 1.1.0**
     + adds support for semantic outputs.
     + bug fixes
     + doc updates
