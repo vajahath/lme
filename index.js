@@ -74,10 +74,10 @@ var m = {
 
 	// default
 	line: function(char, length) {
-		if(!char) {
+		if (!char) {
 			char = '-';
 		};
-		if(!length) {
+		if (!length) {
 			length = 30;
 		};
 		if (typeof(char) == 'object') {
@@ -96,10 +96,10 @@ var m = {
 	},
 	// default - another
 	dline: function(char, length) {
-		if(!char) {
+		if (!char) {
 			char = '-';
 		};
-		if(!length) {
+		if (!length) {
 			length = 30;
 		};
 		if (typeof(char) == 'object') {
@@ -118,10 +118,10 @@ var m = {
 	},
 	// success
 	sline: function(char, length) {
-		if(!char) {
+		if (!char) {
 			char = '-';
 		};
-		if(!length) {
+		if (!length) {
 			length = 30;
 		};
 		if (typeof(char) == 'object') {
@@ -140,10 +140,10 @@ var m = {
 	},
 	// warning
 	wline: function(char, length) {
-		if(!char) {
+		if (!char) {
 			char = '-';
 		};
-		if(!length) {
+		if (!length) {
 			length = 30;
 		};
 		if (typeof(char) == 'object') {
@@ -162,10 +162,10 @@ var m = {
 	},
 	// error
 	eline: function(char, length) {
-		if(!char) {
+		if (!char) {
 			char = '-';
 		};
-		if(!length) {
+		if (!length) {
 			length = 30;
 		};
 		if (typeof(char) == 'object') {
@@ -184,10 +184,10 @@ var m = {
 	},
 	// highlight
 	hline: function(char, length) {
-		if(!char) {
+		if (!char) {
 			char = '-';
 		};
-		if(!length) {
+		if (!length) {
 			length = 30;
 		};
 		if (typeof(char) == 'object') {
@@ -202,6 +202,7 @@ var m = {
 				theLine = theLine + char;
 			};
 			console.log(chalk.bgCyan.black(theLine));
+
 		}
 	}
 };
