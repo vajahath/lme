@@ -1,11 +1,12 @@
+var defaultChar = '-';
+var defaultLength = 30;
+
 function getChar(char, errLogFunc) {
 	if (!char) {
-		char = '-';
-	};
-
-	if (typeof(char) == 'object') {
+		char = defaultChar;
+	} else if (typeof(char) == 'object') {
 		errLogFunc("ERROR: the line() functions can't accept objects!");
-		char = '-'; //continue working with default behaviour.
+		char = defaultChar; //continue working with default behaviour.
 	}
 
 	return char;
@@ -13,7 +14,7 @@ function getChar(char, errLogFunc) {
 
 function getLength(length, warnLogFunc) {
 	if (!length) {
-		length = 30;
+		length = defaultLength;
 	} else if (length > 100) {
 		// warnLogFunc("WARNING: ");
 	};
