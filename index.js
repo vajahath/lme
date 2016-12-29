@@ -11,7 +11,7 @@ var m = {
 
 	// default
 	d: function(msg) {
-    logUtil.logWithColor(chalk.white, msg);
+		logUtil.logWithColor(chalk.white, msg);
 	},
 	// success
 	s: function(msg) {

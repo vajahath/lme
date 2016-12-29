@@ -15,37 +15,37 @@ function getLength(length, warnLogFunc) {
 	if (!length) {
 		length = 30;
 	} else if (length > 100) {
-    // warnLogFunc("WARNING: ");
-  };
+		// warnLogFunc("WARNING: ");
+	};
 
-  return length;
+	return length;
 }
 
 function buildLine(char, length) {
-  var theLine = "";
-  for (var i = 0; i < length; i++) {
-    theLine = theLine + char;
-  };
-  return theLine
+	var theLine = "";
+	for (var i = 0; i < length; i++) {
+		theLine = theLine + char;
+	};
+	return theLine
 }
 
 function createLine(char, length, errLogFunc, warnLogFunc) {
-  var options = {};
-  options.char = getChar(char, errLogFunc);
-  options.length = getLength(length, warnLogFunc);
-  return buildLine(options.char, options.length);
+	var options = {};
+	options.char = getChar(char, errLogFunc);
+	options.length = getLength(length, warnLogFunc);
+	return buildLine(options.char, options.length);
 }
 
 function logLine(char, length, errLogFunc, warnLogFunc, colorFunc) {
-  var theLine = createLine(char, length, errLogFunc, warnLogFunc);
+	var theLine = createLine(char, length, errLogFunc, warnLogFunc);
 
-  if (colorFunc) {
-    theLine = colorFunc(theLine);
-  }
+	if (colorFunc) {
+		theLine = colorFunc(theLine);
+	}
 
-  console.log(theLine);
+	console.log(theLine);
 }
 
 module.exports = {
-  logLine
+	logLine
 }
