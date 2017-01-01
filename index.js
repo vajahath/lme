@@ -81,11 +81,12 @@ function moduleSetup(colors) {
 }
 
 function customColors(options) {
-  //lets use the default colors, unless otherwise specified (options override)
+	//lets use the default colors, unless otherwise specified (options override)
 	var colors = extend(defaultColors, options);
 	return moduleSetup(colors);
 }
 
+//need to make a clone of defaultColors, otherwise customColors might override it.
 var m = moduleSetup(extend({}, defaultColors));
 m.customColors = customColors;
 
