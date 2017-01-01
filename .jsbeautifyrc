@@ -1,0 +1,19 @@
+{
+	"html": {
+		"allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg", "ejs"],
+		"indent_char": "\t",
+		"indent_size": 1,
+		"max_preserve_newlines": 3
+	},
+	"css": {
+		"indent_char": "\t",
+		"indent_size": 1
+	},
+	"js": {
+		"allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
+		"indent_char": "\t",
+		"indent_size": 1,
+		"max_preserve_newlines": 3,
+		"preserve_newlines": true
+	}
+}
