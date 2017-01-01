@@ -121,6 +121,9 @@ Enjoy.
 
 ## Change log
 
+- **v1.3.0**
+    + Internal code structure redesigned for better flexibility. (*thanks [@demacdonald](https://github.com/demacdonald) for [#4](https://github.com/vajahath/lme/pull/4)*)
+    + This package is now capable of having more features in a well structured manner. Developers can now add new features with ease. *We invite you to do so*.
 - **v1.2.0**
     + Adds support for `trace`.
     + Adds support for `info`. (*thanks [@amandeepmittal](https://github.com/amandeepmittal)*)
