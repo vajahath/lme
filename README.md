@@ -10,7 +10,7 @@ lme.d("hello world");
 ```
 
 
-> version 1.2.0 is out with more features and bug fixes. [Update](#install--update) to get most out of `lme`. See [change log](#change-log) for more details.
+> **version 1.3** is out with serious improvements. [Update](#install--update) to get most out of `lme`. See [change log](#change-log) for more details.
 
 
 ## Why `lme` *( logme )*
@@ -120,7 +120,8 @@ If you wish to file any feature/bugs, mention it on [issues](https://github.com/
 Enjoy.
 
 ## Change log
-
+- v1.3.1, v1.3.2
+    + Docs update.
 - **v1.3.0**
     + Internal code structure redesigned for better flexibility. (*thanks [@demacdonald](https://github.com/demacdonald) for [#4](https://github.com/vajahath/lme/pull/4)*)
     + This package is now capable of having more features in a well structured manner. Developers can now add new features with ease. *We invite you to do so*.
