@@ -1,6 +1,8 @@
 'use strict';
 
 var chalk = require('chalk');
+var logUtil = require('./logUtil');
+var linesUtil = require('./linesUtil');
 
 var m = {
 	//////////////////
@@ -9,63 +11,31 @@ var m = {
 
 	// default
 	d: function(msg) {
-		if (typeof(msg) == 'object') {
-			console.log(chalk.white('\n' + JSON.stringify(msg, null, 2)));
-		} else {
-			console.log(chalk.white(msg));
-		}
+		logUtil.logWithColor(chalk.white, msg);
 	},
 	// success
 	s: function(msg) {
-		if (typeof(msg) == 'object') {
-			console.log(chalk.bold.green('\n' + JSON.stringify(msg, null, 2)));
-		} else {
-			console.log(chalk.bold.green(msg));
-		}
+		logUtil.logWithColor(chalk.bold.green, msg);
 	},
 	// warning
 	w: function(msg) {
-		if (typeof(msg) == 'object') {
-			console.log(chalk.bgYellow.black('\n' + JSON.stringify(msg, null, 2)));
-		} else {
-			console.log(chalk.bgYellow.black(msg));
-		}
+		logUtil.logWithColor(chalk.bgYellow.black, msg);
 	},
 	// err
 	e: function(msg) {
-		if (typeof(msg) == 'object') {
-			console.log(chalk.bgRed.white('\n' + JSON.stringify(msg, null, 2)));
-		} else {
-			console.log(chalk.bgRed.white(msg));
-		}
+		logUtil.logWithColor(chalk.bgRed.white, msg);
 	},
 	// highlight
 	h: function(msg) {
-		if (typeof(msg) == 'object') {
-			console.log(chalk.bgCyan.black('\n' + JSON.stringify(msg, null, 2)));
-		} else {
-			console.log(chalk.bgCyan.black(msg));
-		}
+		logUtil.logWithColor(chalk.bgCyan.black, msg);
 	},
 	//info
 	i: function(msg) {
-		if (typeof(msg) == 'object') {
-			console.info(chalk.bold.cyan('\n' + JSON.stringify(msg, null, 2)));
-		} else {
-			console.info(chalk.bold.cyan(msg));
-		}
+		logUtil.logWithColor(chalk.bold.cyan, msg);
 	},
 	//trace:
 	t: function(msg) {
-		if (typeof(msg) == 'object') {
-			console.log(chalk.green("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BEGIN"));
-			console.trace(chalk.green('\n' + JSON.stringify(msg, null, 2)));
-			console.log(chalk.green(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END\n"));
-		} else {
-			console.log(chalk.green("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BEGIN"));
-			console.trace(chalk.green(msg));
-			console.log(chalk.green(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END\n"));
-		}
+		logUtil.logTraceWithColor(chalk.green, msg);
 	},
 
 	///////////
@@ -74,136 +44,27 @@ var m = {
 
 	// default
 	line: function(char, length) {
-		if (!char) {
-			char = '-';
-		};
-		if (!length) {
-			length = 30;
-		};
-		if (typeof(char) == 'object') {
-			this.e("ERROR: the line() function can't accept objects!");
-			char = '-';
-		} else {
-			if (length > 100) {
-				// this.w("WARNING: ");
-			}
-			var theLine = "";
-			for (var i = 0; i < length; i++) {
-				theLine = theLine + char;
-			};
-			console.log(theLine);
-		}
+		linesUtil.logLine(char, length, this.e, this.w);
 	},
 	// default - another
 	dline: function(char, length) {
-		if (!char) {
-			char = '-';
-		};
-		if (!length) {
-			length = 30;
-		};
-		if (typeof(char) == 'object') {
-			this.e("ERROR: the line() functions can't accept objects!");
-			char = '-';
-		} else {
-			if (length > 100) {
-				// this.w("WARNING: ");
-			}
-			var theLine = "";
-			for (var i = 0; i < length; i++) {
-				theLine = theLine + char;
-			};
-			console.log(theLine);
-		}
+		linesUtil.logLine(char, length, this.e, this.w);
 	},
 	// success
 	sline: function(char, length) {
-		if (!char) {
-			char = '-';
-		};
-		if (!length) {
-			length = 30;
-		};
-		if (typeof(char) == 'object') {
-			this.e("ERROR: the line() functions can't accept objects!");
-			char = '-';
-		} else {
-			if (length > 100) {
-				// this.w("WARNING: ");
-			}
-			var theLine = "";
-			for (var i = 0; i < length; i++) {
-				theLine = theLine + char;
-			};
-			console.log(chalk.bold.green(theLine));
-		}
+		linesUtil.logLine(char, length, this.e, this.w, chalk.bold.green);
 	},
 	// warning
 	wline: function(char, length) {
-		if (!char) {
-			char = '-';
-		};
-		if (!length) {
-			length = 30;
-		};
-		if (typeof(char) == 'object') {
-			this.e("ERROR: the line() functions can't accept objects!");
-			char = '-';
-		} else {
-			if (length > 100) {
-				// this.w("WARNING: ");
-			}
-			var theLine = "";
-			for (var i = 0; i < length; i++) {
-				theLine = theLine + char;
-			};
-			console.log(chalk.bgYellow.black(theLine));
-		}
+		linesUtil.logLine(char, length, this.e, this.w, chalk.bgYellow.black);
 	},
 	// error
 	eline: function(char, length) {
-		if (!char) {
-			char = '-';
-		};
-		if (!length) {
-			length = 30;
-		};
-		if (typeof(char) == 'object') {
-			this.e("ERROR: the line() functions can't accept objects!");
-			char = '-';
-		} else {
-			if (length > 100) {
-				// this.w("WARNING: ");
-			}
-			var theLine = "";
-			for (var i = 0; i < length; i++) {
-				theLine = theLine + char;
-			};
-			console.log(chalk.bgRed.white(theLine));
-		}
+		linesUtil.logLine(char, length, this.e, this.w, chalk.bgRed.white);
 	},
 	// highlight
 	hline: function(char, length) {
-		if (!char) {
-			char = '-';
-		};
-		if (!length) {
-			length = 30;
-		};
-		if (typeof(char) == 'object') {
-			this.e("ERROR: the line() functions can't accept objects!");
-			char = '-';
-		} else {
-			if (length > 100) {
-				// this.w("WARNING: ");
-			}
-			var theLine = "";
-			for (var i = 0; i < length; i++) {
-				theLine = theLine + char;
-			};
-			console.log(chalk.bgCyan.black(theLine));
-
-		}
+		linesUtil.logLine(char, length, this.e, this.w, chalk.bgCyan.black);
 	}
 };
 
