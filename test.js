@@ -9,10 +9,6 @@ node test.js
 */
 
 const lme = require('./index');
-var chalk = require('chalk');
-
-var newColors = {i: chalk.bgRed.white};
-const lmeColors = lme.customColors(newColors);
 
 // objects
 lme.d({ kity: "is pinky", fluffy: "is funny!" });
@@ -62,6 +58,4 @@ lme.wline({ yu: 1 });
 lme.eline({ yu: 1 });
 lme.hline({ yu: 1 });
 
-lmeColors.h('should use default highlight color');
-lmeColors.i('This color should be different than below.');
 lme.i('test finished');
