@@ -2,7 +2,6 @@
 var chalk = require('chalk');
 var logUtil = require('./logUtil');
 var linesUtil = require('./linesUtil');
-var extend = require('util')._extend;
 
 var defaultColors = {
 	d: chalk.white,
@@ -82,12 +81,12 @@ function moduleSetup(colors) {
 
 function customColors(options) {
 	//lets use the default colors, unless otherwise specified (options override)
-	var colors = extend(defaultColors, options);
+	var colors = Object.assign({}, defaultColors, options);
 	return moduleSetup(colors);
 }
 
 //need to make a clone of defaultColors, otherwise customColors might override it.
-var m = moduleSetup(extend({}, defaultColors));
+var m = moduleSetup(Object.assign({}, defaultColors));
 m.customColors = customColors;
 
 module.exports = m;
