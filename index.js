@@ -1,33 +1,8 @@
 'use strict';
 
-var chalk = require('chalk');
 var logUtil = require('./logUtil');
 var linesUtil = require('./linesUtil');
-
-// configuration variable
-var config;
-
-try {
-	// try to get the config file from root file of the application.
-	config = require('app-root-path').require("lmeconfig.json");
-} catch (e) {
-	// delete the line below before publishing <<<<<<<<<<<<<<<<<<
-	console.log("Since local config is not found in the app-root-path, lme is using the default config. [need to delete this output before publishing.]")
-
-	// if it fails use the default configuration provided with this package.
-	config = require("./lmeDefaultConfig.json");
-}
-
-// make the read file understandable to chalk.
-for (var i in config.colors) {
-	if (config.colors.hasOwnProperty(i)) {
-		var temp = chalk;
-		config.colors[i].forEach(function(style) {
-			temp = temp[style];
-		});
-		config.colors[i] = temp;
-	}
-}
+var config = require('./config');
 
 var m = {
 	//////////////////
