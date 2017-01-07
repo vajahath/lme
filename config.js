@@ -10,21 +10,21 @@ function getChalkColors(defaultConfig, overrideConfig) {
 function buildChalkFunction(config) {
 	var chalkColors = {};
 	for (var color in config.colors) {
-			if (config.colors.hasOwnProperty(color)) {
-				var colorFunc = chalk;
-				//build up the chalk function
-				try {
-					config.colors[color].forEach(function(style) {
-						colorFunc = colorFunc[style];
-					});
-					if (typeof colorFunc === 'undefined') {
-						throw new Error('Unsupported colorFunc');
-					}
-					chalkColors[color] = colorFunc;
-				} catch(err) {
-					console.log(`Error setting style for ${color}. Will use default style.`);
+		if (config.colors.hasOwnProperty(color)) {
+			var colorFunc = chalk;
+			//build up the chalk function
+			try {
+				config.colors[color].forEach(function(style) {
+					colorFunc = colorFunc[style];
+				});
+				if (typeof colorFunc === 'undefined') {
+					throw new Error('Unsupported colorFunc');
 				}
+				chalkColors[color] = colorFunc;
+			} catch(err) {
+				console.log(`Error setting style for ${color}. Will use default style.`);
 			}
+		}
 	}
 	return chalkColors;
 }
