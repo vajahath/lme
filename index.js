@@ -10,32 +10,32 @@ var m = {
 	//////////////////
 
 	// default
-	d: function(msg) {
-		logUtil.logWithColor(config.colors.default, msg);
+	d: function() {
+		logUtil.logWithColor(config.colors.default, arguments);
 	},
 	// success
-	s: function(msg) {
-		logUtil.logWithColor(config.colors.success, msg);
+	s: function() {
+		logUtil.logWithColor(config.colors.success, arguments);
 	},
 	// warning
-	w: function(msg) {
-		logUtil.logWithColor(config.colors.warning, msg);
+	w: function() {
+		logUtil.logWithColor(config.colors.warning, arguments);
 	},
 	// err
-	e: function(msg) {
-		logUtil.logWithColor(config.colors.error, msg);
+	e: function() {
+		logUtil.logWithColor(config.colors.error, arguments);
 	},
 	// highlight
-	h: function(msg) {
-		logUtil.logWithColor(config.colors.highlight, msg);
+	h: function() {
+		logUtil.logWithColor(config.colors.highlight, arguments);
 	},
 	//info
-	i: function(msg) {
-		logUtil.logWithColor(config.colors.info, msg);
+	i: function() {
+		logUtil.logWithColor(config.colors.info, arguments);
 	},
 	//trace:
-	t: function(msg) {
-		logUtil.logTraceWithColor(config.colors.trace, msg);
+	t: function() {
+		logUtil.logTraceWithColor(config.colors.trace, arguments);
 	},
 
 	///////////

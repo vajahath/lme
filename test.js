@@ -30,6 +30,25 @@ lme.i('mango is sweet!');
 lme.t('mango is sweet!');
 lme.d('\n');
 
+//Multiple Params
+lme.d('mango is sweet!', { mango: 'sweet'});
+lme.s('mango is sweet!', { mango: 'sweet'});
+lme.w('mango is sweet!', { mango: 'sweet'});
+lme.e('mango is sweet!', { mango: 'sweet'});
+lme.h('mango is sweet!', { mango: 'sweet'});
+lme.i('mango is sweet!', { mango: 'sweet'});
+lme.t('mango is sweet!', { mango: 'sweet'});
+lme.d('\n');
+
+lme.d('mango is sweet!', '!!!');
+lme.s('mango is sweet!', '!!!');
+lme.w('mango is sweet!', '!!!');
+lme.e('mango is sweet!', '!!!');
+lme.h('mango is sweet!', '!!!');
+lme.i('mango is sweet!', '!!!');
+lme.t('mango is sweet!', '!!!');
+lme.d('\n');
+
 // lines
 lme.line();
 lme.line('*', 10);
