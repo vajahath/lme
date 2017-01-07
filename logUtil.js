@@ -1,12 +1,12 @@
 
 function getMessageArgs(args) {
-  args = Array.prototype.slice.call(args, 1);
-  return Array.prototype.slice.call(args[0]);
+	args = Array.prototype.slice.call(args, 1);
+	return Array.prototype.slice.call(args[0]);
 }
 
 function logWithColor(colorFunc) {
-  var args = getMessageArgs(arguments);
-  logMessage(colorFunc, args, console.log);
+	var args = getMessageArgs(arguments);
+	logMessage(colorFunc, args, console.log);
 }
 
 function logTraceWithColor(colorFunc) {
