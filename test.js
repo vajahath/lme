@@ -41,6 +41,8 @@ testAllLogFunctions('mango is sweet!');
 //Multiple Params
 testAllLogFunctions('mango is sweet!', { mango: 'sweet' });
 testAllLogFunctions('mango is sweet!', '!!!');
+testAllLogFunctions({ 'mango is': 'sweet' }, { 'mango is': 'sweet' });
+
 
 // lines
 testAllLineFunctions();
