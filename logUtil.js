@@ -1,4 +1,3 @@
-
 function getMessageArgs(args) {
 	args = Array.prototype.slice.call(args, 1);
 	return Array.prototype.slice.call(args[0]);
@@ -20,13 +19,13 @@ function logTraceWithColor(colorFunc) {
 function logMessage(colorFunc, msgArgs, consoleFunc) {
 	var outputArgs = [];
 
-	msgArgs.forEach((arg) => {
+	msgArgs.forEach(function(arg) {
 		if (typeof(arg) == 'object') {
 			outputArgs.push('\n' + JSON.stringify(arg, null, 2))
 		} else {
 			outputArgs.push(arg)
 		}
-	})
+	});
 	consoleFunc(colorFunc.apply(this, outputArgs));
 }
 
