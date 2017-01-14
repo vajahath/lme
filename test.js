@@ -58,4 +58,17 @@ lme.wline({ yu: 1 });
 lme.eline({ yu: 1 });
 lme.hline({ yu: 1 });
 
+// lines with char morethan 100 char
+lme.line('*', 110);
+
+lme.dline('*', 110);
+
+lme.sline('*', 110);
+
+lme.wline('*', 110);
+
+lme.eline('*', 110);
+
+lme.hline('*', 110);
+
 lme.i('test finished');

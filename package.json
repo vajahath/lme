@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/vajahath/lme#readme",
   "dependencies": {
+    "app-root-path": "^2.0.1",
     "chalk": "^1.1.3"
   },
   "contributors": [
     "Derek MacDonald (https://github.com/demacdonald)",
     "Aman Mittal (https://github.com/amandeepmittal)"
   ]
-
 }

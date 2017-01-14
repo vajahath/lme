@@ -1,0 +1,11 @@
+{
+	"colors": {
+		"default": ["white"],
+		"success": ["bold", "green"],
+		"warning": ["bgYellow", "black"],
+		"error": ["bgRed", "white"],
+		"highlight": ["bgCyan", "black"],
+		"info": ["bold", "cyan"],
+		"trace": ["green"]
+	}
+}

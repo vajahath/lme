@@ -1,8 +1,8 @@
 'use strict';
 
-var chalk = require('chalk');
 var logUtil = require('./logUtil');
 var linesUtil = require('./linesUtil');
+var config = require('./config');
 
 var m = {
 	//////////////////
@@ -11,31 +11,31 @@ var m = {
 
 	// default
 	d: function(msg) {
-		logUtil.logWithColor(chalk.white, msg);
+		logUtil.logWithColor(config.colors.default, msg);
 	},
 	// success
 	s: function(msg) {
-		logUtil.logWithColor(chalk.bold.green, msg);
+		logUtil.logWithColor(config.colors.success, msg);
 	},
 	// warning
 	w: function(msg) {
-		logUtil.logWithColor(chalk.bgYellow.black, msg);
+		logUtil.logWithColor(config.colors.warning, msg);
 	},
 	// err
 	e: function(msg) {
-		logUtil.logWithColor(chalk.bgRed.white, msg);
+		logUtil.logWithColor(config.colors.error, msg);
 	},
 	// highlight
 	h: function(msg) {
-		logUtil.logWithColor(chalk.bgCyan.black, msg);
+		logUtil.logWithColor(config.colors.highlight, msg);
 	},
 	//info
 	i: function(msg) {
-		logUtil.logWithColor(chalk.bold.cyan, msg);
+		logUtil.logWithColor(config.colors.info, msg);
 	},
 	//trace:
 	t: function(msg) {
-		logUtil.logTraceWithColor(chalk.green, msg);
+		logUtil.logTraceWithColor(config.colors.trace, msg);
 	},
 
 	///////////
@@ -52,20 +52,20 @@ var m = {
 	},
 	// success
 	sline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, chalk.bold.green);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.success);
 	},
 	// warning
 	wline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, chalk.bgYellow.black);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.warning);
 	},
 	// error
 	eline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, chalk.bgRed.white);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.error);
 	},
 	// highlight
 	hline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, chalk.bgCyan.black);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.highlight);
 	}
-};
+}
 
 module.exports = m;
