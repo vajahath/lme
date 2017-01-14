@@ -21,8 +21,8 @@ function buildChalkFunction(config) {
 					throw new Error('Unsupported colorFunc');
 				}
 				chalkColors[color] = colorFunc;
-			} catch(err) {
-				console.log(`Error setting style for ${color}. Will use default style.`);
+			} catch (err) {
+				console.log('Error setting style for ' + color + '. Will use default style.');
 			}
 		}
 	}
