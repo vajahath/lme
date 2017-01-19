@@ -4,7 +4,8 @@
   "description": "Simply and beautifully log to console.",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -32,5 +33,8 @@
   "contributors": [
     "Derek MacDonald (https://github.com/demacdonald)",
     "Aman Mittal (https://github.com/amandeepmittal)"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^3.13.1"
+  }
 }
