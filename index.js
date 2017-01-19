@@ -66,6 +66,6 @@ var m = {
 	hline: function(char, length) {
 		linesUtil.logLine(char, length, this.e, this.w, config.colors.highlight);
 	}
-}
+};
 
 module.exports = m;

@@ -8,7 +8,7 @@ node test.js
 
 */
 
-const lme = require('./index');
+var lme = require('./index');
 
 function testAllLogFunctions() {
 	var args = Array.prototype.slice.call(arguments);
@@ -33,7 +33,7 @@ function testAllLineFunctions() {
 }
 
 // objects
-testAllLogFunctions({ kity: "is pinky", fluffy: "is funny!" });
+testAllLogFunctions({ kity: 'is pinky', fluffy: 'is funny!' });
 
 // strings
 testAllLogFunctions('mango is sweet!');
@@ -50,7 +50,7 @@ testAllLineFunctions('*', 10);
 testAllLineFunctions('*', 110);
 
 // error-ed outputs for lines
-lme.i("\nerror-ed outputs");
+lme.i('\nerror-ed outputs');
 
 testAllLineFunctions({ yu: 1 });
 
