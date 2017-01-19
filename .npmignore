@@ -1,3 +1,4 @@
 media/
 .jsbeautifyrc
 test.js
+tests/
