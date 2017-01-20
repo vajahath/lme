@@ -1,5 +1,4 @@
 # Test for custom color config
----
 
 ## Why this extra directory?
 - This directory has `lmeconfig.json` file.
