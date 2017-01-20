@@ -6,7 +6,13 @@ var config = require('./config');
 
 function getLogLevel() {
 	var level = process.env.LOG_LEVEL;
-	return level || 7;
+	if (level) {
+		level = config._logLevels[level.toLowerCase()];
+	} else {
+		//default log level
+		level = 7;
+	}
+	return level;
 }
 
 function meetsLogLevelRequirement(loggerLevel) {
