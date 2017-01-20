@@ -11,9 +11,9 @@ function logWithColor(colorFunc) {
 function logTraceWithColor(colorFunc) {
 	var args = getMessageArgs(arguments);
 
-	console.log(colorFunc("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BEGIN"));
+	console.log(colorFunc('\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< BEGIN'));
 	logMessage(colorFunc, args, console.trace);
-	console.log(colorFunc(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END\n"));
+	console.log(colorFunc('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END\n'));
 }
 
 function logMessage(colorFunc, msgArgs, consoleFunc) {
@@ -21,15 +21,15 @@ function logMessage(colorFunc, msgArgs, consoleFunc) {
 
 	msgArgs.forEach(function(arg) {
 		if (typeof(arg) == 'object') {
-			outputArgs.push('\n' + JSON.stringify(arg, null, 2))
+			outputArgs.push('\n' + JSON.stringify(arg, null, 2));
 		} else {
-			outputArgs.push(arg)
+			outputArgs.push(arg);
 		}
 	});
 	consoleFunc(colorFunc.apply(this, outputArgs));
 }
 
 module.exports = {
-	logWithColor,
-	logTraceWithColor
-}
+	logWithColor: logWithColor,
+	logTraceWithColor: logTraceWithColor
+};

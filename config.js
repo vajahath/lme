@@ -29,11 +29,11 @@ function buildChalkFunction(config) {
 	return chalkColors;
 }
 
-var configInput = require("./lmeDefaultConfig.json");
+var configInput = require('./lmeDefaultConfig.json');
 var providedConfig = {};
 try {
 	// try to get the config file from root file of the application.
-	providedConfig = require('app-root-path').require("lmeconfig.json");
+	providedConfig = require('app-root-path').require('lmeconfig.json');
 } catch (e) {
 	//it is okay if no override file is provided
 }
