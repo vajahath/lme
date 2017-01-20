@@ -11,10 +11,10 @@ You don't have to write the 13 char long `console.log()` anymore. Try:
 lme.d("hello world");
 ```
 
-> **v1.4** is out. **What's new?** 
->  ***** Now [define your own color schemes](#custom-color-schemes)!
->  ***** Multiple argumnets support: _`lme.s("hi", "hello")`_
->  ***** Stability and performance improvements.
+> **v1.4** is out. **What's new?**<br>
+>  **-** Now [define your own color schemes](#custom-color-schemes)! <br>
+>  **-** Multiple argumnets support: _`lme.s("hi", "hello")`_ <br>
+>  **-** Stability and performance improvements.
 
 
 ## Why `lme` *( logme )*
