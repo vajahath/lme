@@ -4,6 +4,15 @@ var logUtil = require('./logUtil');
 var linesUtil = require('./linesUtil');
 var config = require('./config');
 
+function getLogLevel() {
+	var level = process.env.LOG_LEVEL;
+	return level || 7;
+}
+
+function meetsLogLevelRequirement(loggerLevel) {
+	return config._logLevels[loggerLevel] <= getLogLevel();
+}
+
 var m = {
 	//////////////////
 	// main methods //
@@ -11,31 +20,45 @@ var m = {
 
 	// default
 	d: function() {
-		logUtil.logWithColor(config.colors.default, arguments);
+		if (meetsLogLevelRequirement('default')) {
+			logUtil.logWithColor(config.colors.default, arguments);
+		}
 	},
 	// success
 	s: function() {
-		logUtil.logWithColor(config.colors.success, arguments);
+		if (meetsLogLevelRequirement('success')) {
+			logUtil.logWithColor(config.colors.success, arguments);
+		}
 	},
 	// warning
 	w: function() {
-		logUtil.logWithColor(config.colors.warning, arguments);
+		if(meetsLogLevelRequirement('warning')) {
+			logUtil.logWithColor(config.colors.warning, arguments);
+		}
 	},
 	// err
 	e: function() {
-		logUtil.logWithColor(config.colors.error, arguments);
+		if (meetsLogLevelRequirement('error')) {
+			logUtil.logWithColor(config.colors.error, arguments);
+		}
 	},
 	// highlight
 	h: function() {
-		logUtil.logWithColor(config.colors.highlight, arguments);
+		if(meetsLogLevelRequirement('highlight')) {
+			logUtil.logWithColor(config.colors.highlight, arguments);
+		}
 	},
 	//info
 	i: function() {
-		logUtil.logWithColor(config.colors.info, arguments);
+		if (meetsLogLevelRequirement('info')) {
+			logUtil.logWithColor(config.colors.info, arguments);
+		}
 	},
 	//trace:
 	t: function() {
-		logUtil.logTraceWithColor(config.colors.trace, arguments);
+		if (meetsLogLevelRequirement('trace')) {
+			logUtil.logTraceWithColor(config.colors.trace, arguments);
+		}
 	},
 
 	///////////
@@ -44,27 +67,51 @@ var m = {
 
 	// default
 	line: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w);
+		if (meetsLogLevelRequirement('default')) {
+			linesUtil.logLine(char, length, this.e, this.w);
+		}
 	},
 	// default - another
 	dline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w);
+		if (meetsLogLevelRequirement('default')) {
+			linesUtil.logLine(char, length, this.e, this.w);
+		}
 	},
 	// success
 	sline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.success);
+		if (meetsLogLevelRequirement('success')) {
+			linesUtil.logLine(char, length, this.e, this.w, config.colors.success);
+		}
 	},
 	// warning
 	wline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.warning);
+		if(meetsLogLevelRequirement('warning')) {
+			linesUtil.logLine(char, length, this.e, this.w, config.colors.warning);
+		}
 	},
 	// error
 	eline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.error);
+		if (meetsLogLevelRequirement('error')) {
+			linesUtil.logLine(char, length, this.e, this.w, config.colors.error);
+		}
 	},
 	// highlight
 	hline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.highlight);
+		if(meetsLogLevelRequirement('highlight')) {
+			linesUtil.logLine(char, length, this.e, this.w, config.colors.highlight);
+		}
+	},
+	// info
+	iline: function(char, length) {
+		if (meetsLogLevelRequirement('info')) {
+			linesUtil.logLine(char, length, this.e, this.w, config.colors.info);
+		}
+	},
+	// trace
+	tline: function(char, length) {
+		if (meetsLogLevelRequirement('trace')) {
+			linesUtil.logLineWithTrace(char, length, this.e, this.w, config.colors.trace);
+		}
 	}
 };
 

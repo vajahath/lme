@@ -37,16 +37,25 @@ function createLine(char, length, errLogFunc, warnLogFunc) {
 	return buildLine(options.char, options.length);
 }
 
-function logLine(char, length, errLogFunc, warnLogFunc, colorFunc) {
+function buildAndLog(char, length, errLogFunc, warnLogFunc, colorFunc, consoleFunc) {
 	var theLine = createLine(char, length, errLogFunc, warnLogFunc);
 
 	if (colorFunc) {
 		theLine = colorFunc(theLine);
 	}
 
-	console.log(theLine);
+	consoleFunc(theLine);
+}
+
+function logLine(char, length, errLogFunc, warnLogFunc, colorFunc) {
+	buildAndLog(char, length, errLogFunc, warnLogFunc, colorFunc, console.log);
+}
+
+function logLineWithTrace(char, length, errLogFunc, warnLogFunc, colorFunc) {
+	buildAndLog(char, length, errLogFunc, warnLogFunc, colorFunc, console.trace);
 }
 
 module.exports = {
-	logLine: logLine
+	logLine: logLine,
+	logLineWithTrace: logLineWithTrace
 };
