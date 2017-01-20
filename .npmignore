@@ -1,4 +1,6 @@
 media/
 .jsbeautifyrc
+.eslintrc.yml
+.travis.yml
 test.js
 tests/
