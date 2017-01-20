@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
+
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
 
 **`console.log` ging done right, beautifully.**
