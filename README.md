@@ -1,3 +1,6 @@
+> lme 1.4 pre-release: Request for comments and review. <br>
+> Production npm release on 21st Jan 2017.
+
 [![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
 
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
@@ -187,7 +190,7 @@ You can find default configurations in
 ```bash
 ./node_modules/lme/lmeDefaultConfig.json
 ```
-> **Note: ** It is not recommended to alter this file. If you need to change it, adding an `lmeconfig.json` file at the application root directory is equivalent and safe.
+> **Note:** It is not recommended to alter this file. If you need to change it, adding an `lmeconfig.json` file at the application root directory is equivalent and safe.
 
 here is an example:
 ```json
@@ -229,9 +232,8 @@ Thanks for using `lme`.
 
 - **v1.4.0**
     - Added support for custom color configuration.
-    - Added support for multiple arguments.
+    - Added support for multiple arguments. (*thanks [@demacdonald](https://github.com/demacdonald)*)
     - Stability and performance improvements.
-*([thanks](#thanks))*
 - v1.3.1, v1.3.2
     + Docs update.
 - **v1.3.0**
