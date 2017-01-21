@@ -29,7 +29,7 @@ function buildChalkFunction(config) {
 	return chalkColors;
 }
 
-var configInput = require('./lmeDefaultConfig.json');
+var configInput = require('../lmeDefaultConfig.json');
 var providedConfig = {};
 try {
 	// try to get the config file from root file of the application.
@@ -46,5 +46,9 @@ configInput._logLevels = {
 	'error': 3,
 	'highlight': 2,
 	'default': 1
+};
+configInput._types = {
+	'log': 0,
+	'line': 1
 };
 module.exports = configInput;
