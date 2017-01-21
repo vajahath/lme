@@ -37,5 +37,5 @@ try {
 } catch (e) {
 	//it is okay if no override file is provided
 }
-configInput.colors.logs = getChalkColors(configInput.colors, providedConfig);
+configInput.colors.logs = getChalkColors(configInput.colors, providedConfig.colors);
 module.exports = configInput;
