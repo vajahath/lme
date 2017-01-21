@@ -6,9 +6,9 @@ var loggingFunctions = require('./loggingFunctions');
 function getLogLevel() {
 	var level = process.env.LOG_LEVEL;
 	if (level) {
-		level = config._logLevels[level.toLowerCase()];
+		level = config._logLevels[level.toLowerCase()].level;
 	}
-	return level || config._logLevels.trace;
+	return level || config._logLevels.trace.level;
 }
 
 function meetsLogLevelRequirement(loggerLevel) {

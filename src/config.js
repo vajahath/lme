@@ -39,13 +39,13 @@ try {
 }
 configInput.colors = getChalkColors(configInput, providedConfig);
 configInput._logLevels = {
-	'trace': 7,
-	'info': 6,
-	'success': 5,
-	'warning': 4,
-	'error': 3,
-	'highlight': 2,
-	'default': 1
+	'trace': {level: 7, letter: 't'},
+	'info': {level: 6, letter: 'i'},
+	'success': {level: 5, letter: 's'},
+	'warning': {level: 4, letter: 'w'},
+	'error': {level: 3, letter: 'e'},
+	'highlight': {level: 2, letter: 'h'},
+	'default': {level: 1, letter: 'd'}
 };
 configInput._types = {
 	'log': 0,
