@@ -38,4 +38,13 @@ try {
 	//it is okay if no override file is provided
 }
 configInput.colors = getChalkColors(configInput, providedConfig);
+configInput._logLevels = {
+	'trace': 7,
+	'info': 6,
+	'success': 5,
+	'warning': 4,
+	'error': 3,
+	'highlight': 2,
+	'default': 1
+};
 module.exports = configInput;
