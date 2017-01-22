@@ -1,7 +1,7 @@
 'use strict';
 
-var config = require('./config');
-var loggingFunctions = require('./loggingFunctions');
+var config = require('./src/config');
+var loggingFunctions = require('./src/loggingFunctions');
 
 function getLogLevel() {
 	var level = process.env.LOG_LEVEL;

@@ -8,7 +8,7 @@ node test.js
 
 */
 
-var lme = require('./src/index');
+var lme = require('./index');
 
 function testAllLogFunctions() {
 	var args = Array.prototype.slice.call(arguments);
