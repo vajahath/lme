@@ -29,7 +29,7 @@ function buildChalkFunction(config) {
 	return chalkColors;
 }
 
-var configInput = require('./lmeDefaultConfig.json');
+var configInput = require('../lmeDefaultConfig.json');
 var providedConfig = {};
 try {
 	// try to get the config file from root file of the application.
@@ -38,4 +38,17 @@ try {
 	//it is okay if no override file is provided
 }
 configInput.colors = getChalkColors(configInput, providedConfig);
+configInput._logLevels = {
+	'trace': {level: 7, letter: 't'},
+	'info': {level: 6, letter: 'i'},
+	'success': {level: 5, letter: 's'},
+	'warning': {level: 4, letter: 'w'},
+	'error': {level: 3, letter: 'e'},
+	'highlight': {level: 2, letter: 'h'},
+	'default': {level: 1, letter: 'd'}
+};
+configInput._types = {
+	'log': 0,
+	'line': 1
+};
 module.exports = configInput;

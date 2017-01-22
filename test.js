@@ -30,6 +30,8 @@ function testAllLineFunctions() {
 	lme.wline.apply(lme, args);
 	lme.eline.apply(lme, args);
 	lme.hline.apply(lme, args);
+	lme.iline.apply(lme, args);
+	lme.tline.apply(lme, args);
 }
 
 // objects
