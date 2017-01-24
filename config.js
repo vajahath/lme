@@ -9,23 +9,27 @@ function getChalkColors(defaultConfig, overrideConfig) {
 
 function buildChalkFunction(config) {
 	var chalkColors = {};
-	if (config) {
-		for (var color in config.logs) {
-			if (config.logs.hasOwnProperty(color)) {
-				var colorFunc = chalk;
-				//build up the chalk function
-				try {
-					config.logs[color].forEach(function (style) {
-						colorFunc = colorFunc[style];
-					});
-					if (typeof colorFunc === 'undefined') {
-						throw new Error('Unsupported colorFunc');
-					}
-					chalkColors[color] = colorFunc;
-				} catch (err) {
-					console.log('Error setting style for ' + color + '. Will use default style.');
-				}
+	// if config is empty
+	if (!config) {
+		return {};
+	}
+	// else
+	for (var color in config.logs) {
+		if (!config.logs.hasOwnProperty(color))
+			continue;
+
+		var colorFunc = chalk;
+		//build up the chalk function
+		try {
+			config.logs[color].forEach(function (style) {
+				colorFunc = colorFunc[style];
+			});
+			if (typeof colorFunc === 'undefined') {
+				throw new Error('Unsupported colorFunc');
 			}
+			chalkColors[color] = colorFunc;
+		} catch (err) {
+			console.log('Error setting style for ' + color + '. Will use default style.');
 		}
 	}
 	return chalkColors;
