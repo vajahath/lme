@@ -36,22 +36,22 @@ function testAllLineFunctions() {
 }
 
 // objects
-lme.h("objects");
+lme.h('objects');
 testAllLogFunctions({ kity: 'is pinky', fluffy: 'is funny!' });
 
 // strings
-lme.h("strings");
+lme.h('strings');
 testAllLogFunctions('mango is sweet!');
 
 //Multiple Params
-lme.h("multiple params");
+lme.h('multiple params');
 testAllLogFunctions('mango is sweet!', { mango: 'sweet' });
 testAllLogFunctions('mango is sweet!', '!!!');
 testAllLogFunctions({ 'mango is': 'sweet' }, { 'mango is': 'sweet' });
 
 
 // lines
-lme.h("lines");
+lme.h('lines');
 testAllLineFunctions();
 testAllLineFunctions('*', 10);
 testAllLineFunctions('*', 110);
