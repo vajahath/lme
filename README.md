@@ -235,6 +235,8 @@ Thanks for using `lme`.
 
 ## Change log
 
+- **v1.4.1**
+    - Patch: Excluding an unnecessary folder -> reduces package size.
 - **v1.4.0** (26th Jan 2017)
     - Added support for custom color configuration.
     - Added support for multiple arguments. (*thanks [@demacdonald](https://github.com/demacdonald)*)
