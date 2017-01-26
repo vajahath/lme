@@ -9,21 +9,28 @@ function getChalkColors(defaultConfig, overrideConfig) {
 
 function buildChalkFunction(config) {
 	var chalkColors = {};
-	for (var color in config.colors) {
-		if (config.colors.hasOwnProperty(color)) {
-			var colorFunc = chalk;
-			//build up the chalk function
-			try {
-				config.colors[color].forEach(function(style) {
-					colorFunc = colorFunc[style];
-				});
-				if (typeof colorFunc === 'undefined') {
-					throw new Error('Unsupported colorFunc');
-				}
-				chalkColors[color] = colorFunc;
-			} catch (err) {
-				console.log('Error setting style for ' + color + '. Will use default style.');
+	// if config is empty
+	if (!config) {
+		return {};
+	}
+	// else
+	for (var color in config.logs) {
+		if (!config.logs.hasOwnProperty(color)) {
+			continue;
+		}
+
+		var colorFunc = chalk;
+		//build up the chalk function
+		try {
+			config.logs[color].forEach(function (style) {
+				colorFunc = colorFunc[style];
+			});
+			if (typeof colorFunc === 'undefined') {
+				throw new Error('Unsupported colorFunc');
 			}
+			chalkColors[color] = colorFunc;
+		} catch (err) {
+			console.log('Error setting style for ' + color + '. Will use default style.');
 		}
 	}
 	return chalkColors;
@@ -37,5 +44,5 @@ try {
 } catch (e) {
 	//it is okay if no override file is provided
 }
-configInput.colors = getChalkColors(configInput, providedConfig);
+configInput.colors.logs = getChalkColors(configInput.colors, providedConfig.colors);
 module.exports = configInput;

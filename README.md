@@ -135,17 +135,20 @@ Basically, this file describes your configurations that the `lme` should follow.
 Below is an example `lmeconfig.json`:
 ```json
 {
-    "colors": {
-        "default": ["blue"],
-        "success": ["bold", "cyan"]
-    }
+	"colors": {
+		"logs": {
+			"default": ["red"],
+			"error": ["bgRed", "cyan"]
+		}
+	}
 }
 ```
 This configuration will overwrite the default configurations.
 So, 
 
- - when you use `lme.d("hi")` next time, it will be in blue.
- - when you use `lme.s("hi")` next time, text will be bold and color will be cyan.
+ - when you use `lme.d("hi")` next time, it will be in **red**.
+ - when you use `lme.e("hi")` next time, text-color will be **cyan** and background-color will be **red**.
+ - the changes will also be reflected in corresponding line functions. In this case, `lme.line()`,  `lme.dline()`, `lme.eline()`.
  - Nothing else will be changed.
 
 ### Possible values in `lmeconfig.json`
@@ -168,22 +171,25 @@ Example:
 
 ```json
 {
-    "colors":{
-        "error": ["red", "bgBlack", "bold"]
-    }
+	"colors": {
+		"logs": {
+			"error": ["bgRed", "cyan", "bold"]
+		}
+	}
 }
 ```
 
-#### Properties
-| Properties          | what it does?    |
-| :------------------ | :--------------- |
-| `colors.default`    | styles `lme.d()` |
-| `colors.success`    | styles `lme.s()` |
-| `colors.error`      | styles `lme.e()` |
-| `colors.warning`    | styles `lme.w()` |
-| `colors.highlight`  | styles `lme.h()` |
-| `colors.info`       | styles `lme.i()` |
-| `colors.trace`      | styles `lme.t()` |
+#### Properties and its jobs
+Below is the list of all properties and its jobs that the `lmeconfig.json` file can have.  
+| Properties               | what it does?    |
+| :----------------------- | :--------------- |
+| `colors.logs.default`    | styles `lme.d()` |
+| `colors.logs.success`    | styles `lme.s()` |
+| `colors.logs.error`      | styles `lme.e()` |
+| `colors.logs.warning`    | styles `lme.w()` |
+| `colors.logs.highlight`  | styles `lme.h()` |
+| `colors.logs.info`       | styles `lme.i()` |
+| `colors.logs.trace`      | styles `lme.t()` |
 
 ### Default configurations
 You can find default configurations in 
@@ -195,15 +201,17 @@ You can find default configurations in
 here is an example:
 ```json
 {
-    "colors": {
-        "default": ["white"],
-        "success": ["bold", "green"],
-        "warning": ["bgYellow", "black"],
-        "error": ["bgRed", "white"],
-        "highlight": ["bgCyan", "black"],
-        "info": ["bold", "cyan"],
-        "trace": ["green"]
-    }
+	"colors": {
+		"logs": {
+			"default": ["white"],
+			"success": ["bold", "green"],
+			"warning": ["bgYellow", "black"],
+			"error": ["bgRed", "white"],
+			"highlight": ["bgCyan", "black"],
+			"info": ["bold", "cyan"],
+			"trace": ["green"]
+		}
+	}
 }
 
 ```
@@ -230,7 +238,7 @@ Thanks for using `lme`.
 
 ## Change log
 
-- **v1.4.0**
+- **v1.4.0** (26th Jan 2017)
     - Added support for custom color configuration.
     - Added support for multiple arguments. (*thanks [@demacdonald](https://github.com/demacdonald)*)
     - Stability and performance improvements.

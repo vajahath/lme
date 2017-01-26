@@ -1,5 +1,8 @@
 {
 	"colors": {
-		"default": ["blue"]
+		"logs": {
+			"default": ["red"],
+			"error": ["bgRed", "cyan"]
+		}
 	}
 }

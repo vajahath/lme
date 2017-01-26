@@ -11,31 +11,31 @@ var m = {
 
 	// default
 	d: function() {
-		logUtil.logWithColor(config.colors.default, arguments);
+		logUtil.logWithColor(config.colors.logs.default, arguments);
 	},
 	// success
 	s: function() {
-		logUtil.logWithColor(config.colors.success, arguments);
+		logUtil.logWithColor(config.colors.logs.success, arguments);
 	},
 	// warning
 	w: function() {
-		logUtil.logWithColor(config.colors.warning, arguments);
+		logUtil.logWithColor(config.colors.logs.warning, arguments);
 	},
 	// err
 	e: function() {
-		logUtil.logWithColor(config.colors.error, arguments);
+		logUtil.logWithColor(config.colors.logs.error, arguments);
 	},
 	// highlight
 	h: function() {
-		logUtil.logWithColor(config.colors.highlight, arguments);
+		logUtil.logWithColor(config.colors.logs.highlight, arguments);
 	},
 	//info
 	i: function() {
-		logUtil.logWithColor(config.colors.info, arguments);
+		logUtil.logWithColor(config.colors.logs.info, arguments);
 	},
 	//trace:
 	t: function() {
-		logUtil.logTraceWithColor(config.colors.trace, arguments);
+		logUtil.logTraceWithColor(config.colors.logs.trace, arguments);
 	},
 
 	///////////
@@ -52,19 +52,19 @@ var m = {
 	},
 	// success
 	sline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.success);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.success);
 	},
 	// warning
 	wline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.warning);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.warning);
 	},
 	// error
 	eline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.error);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.error);
 	},
 	// highlight
 	hline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.highlight);
+		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.highlight);
 	}
 };
 
