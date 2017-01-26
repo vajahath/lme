@@ -15,8 +15,9 @@ function buildChalkFunction(config) {
 	}
 	// else
 	for (var color in config.logs) {
-		if (!config.logs.hasOwnProperty(color))
+		if (!config.logs.hasOwnProperty(color)) {
 			continue;
+		}
 
 		var colorFunc = chalk;
 		//build up the chalk function
