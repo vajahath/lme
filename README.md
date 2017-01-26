@@ -1,7 +1,4 @@
-> lme 1.4 pre-release: Request for comments and review. <br>
-> Production npm release on 26th Jan 2017.
-
-[![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
+[![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=stable)](https://travis-ci.org/vajahath/lme)
 
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
 
