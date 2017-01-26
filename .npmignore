@@ -4,3 +4,4 @@ media/
 .travis.yml
 test.js
 tests/
+.vscode/
