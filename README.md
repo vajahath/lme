@@ -177,7 +177,8 @@ Example:
 ```
 
 #### Properties and its jobs
-Below is the list of all properties and its jobs that the `lmeconfig.json` file can have.  
+Below is the list of all properties and its jobs that the `lmeconfig.json` file can have.
+  
 | Properties               | what it does?    |
 | :----------------------- | :--------------- |
 | `colors.logs.default`    | styles `lme.d()` |
