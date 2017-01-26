@@ -238,7 +238,7 @@ Thanks for using `lme`.
 
 ## Change log
 
-- **v1.4.0**
+- **v1.4.0** (26th Jan 2017)
     - Added support for custom color configuration.
     - Added support for multiple arguments. (*thanks [@demacdonald](https://github.com/demacdonald)*)
     - Stability and performance improvements.
