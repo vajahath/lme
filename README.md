@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=stable)](https://travis-ci.org/vajahath/lme)
 
-![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
+![](https://raw.githubusercontent.com/vajahath/lme/stable/media/logo.png)
 
 **`console.log` ging done right, beautifully.**
 
@@ -26,9 +26,9 @@ lme.d("hello world");
 - Actively maintained.
 - Consistent design for errors, warnings, successes etc.
 
-![](https://raw.githubusercontent.com/vajahath/lme/master/media/obj-img.png)
-![](https://raw.githubusercontent.com/vajahath/lme/master/media/str-img.png)
-![](https://raw.githubusercontent.com/vajahath/lme/master/media/lines.png)
+![](https://raw.githubusercontent.com/vajahath/lme/stable/media/windows-object.png)
+![](https://raw.githubusercontent.com/vajahath/lme/stable/media/windows-string.png)
+![](https://raw.githubusercontent.com/vajahath/lme/stable/media/windows-line.png)
 
 
 ## Install / Update
@@ -177,7 +177,8 @@ Example:
 ```
 
 #### Properties and its jobs
-Below is the list of all properties and its jobs that the `lmeconfig.json` file can have.  
+Below is the list of all properties and its jobs that the `lmeconfig.json` file can have.
+  
 | Properties               | what it does?    |
 | :----------------------- | :--------------- |
 | `colors.logs.default`    | styles `lme.d()` |
@@ -235,13 +236,14 @@ Thanks for using `lme`.
 
 ## Change log
 
-- **v1.4.1**
+- **v1.4.1, v1.4.2**
     - Patch: Excluding an unnecessary folder -> reduces package size.
+    - Updating docs and media.
 - **v1.4.0** (26th Jan 2017)
     - Added support for custom color configuration.
     - Added support for multiple arguments. (*thanks [@demacdonald](https://github.com/demacdonald)*)
     - Stability and performance improvements.
-- v1.3.1, v1.3.2
+- **v1.3.1, v1.3.2**
     + Docs update.
 - **v1.3.0**
     + Internal code structure redesigned for better flexibility. (*thanks [@demacdonald](https://github.com/demacdonald) for [#4](https://github.com/vajahath/lme/pull/4)*)
