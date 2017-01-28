@@ -65,7 +65,7 @@ if(!providedConfig.colors){
 			logs:{},
 			lines:{}
 		}
-	}
+	};
 }
 
 // get color info for logs

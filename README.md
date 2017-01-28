@@ -1,6 +1,3 @@
-> lme 1.4 pre-release: Request for comments and review. <br>
-> Production npm release on 26th Jan 2017.
-
 [![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
 
 ![](https://raw.githubusercontent.com/vajahath/lme/master/media/logo.png)
@@ -142,7 +139,7 @@ Below is an example `lmeconfig.json`:
 }
 ```
 This configuration will overwrite the default configurations.
-So, 
+So,
 
  - when you use `lme.d("hi")` next time, it will be in blue.
  - when you use `lme.s("hi")` next time, text will be bold and color will be cyan.
@@ -161,7 +158,7 @@ So,
 | `magenta`          | `bgCyan`             | `inverse`                               |
 | `cyan`             | `bgWhite`            | `hidden`                                |
 | `white`            | `bgBlue`             |`strikethrough` (not widely supported)   |
-| `gray`             | 
+| `gray`             |
 
 You can specify multiple styles for a text by mentioning it as an `Array`.
 Example:
@@ -186,7 +183,7 @@ Example:
 | `colors.trace`      | styles `lme.t()` |
 
 ### Default configurations
-You can find default configurations in 
+You can find default configurations in
 ```bash
 ./node_modules/lme/lmeDefaultConfig.json
 ```
