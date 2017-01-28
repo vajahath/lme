@@ -37,23 +37,23 @@ var configInput = require('../lmeDefaultConfig.json');
 var providedConfig = {};
 try {
 	// try to get the config file from root file of the application.
-	// providedConfig = require('app-root-path').require('lmeconfig.json');
+	providedConfig = require('app-root-path').require('lmeconfig.json');
 
 	// mock provided config: comment out this block before releasing it to production.
-	providedConfig = {
-		"colors": {
-			"logs": {
-				"default": ["cyan"],
-				"success": ["bold", "yellow"],
-				"error": ["underline", "red"]
-			},
-			"line": {
-				"default": ["cyan"],
-				"error": ["red"],
-				"warning": ["underline", "cyan"]
-			}
-		}
-	}
+	// providedConfig = {
+	// 	"colors": {
+	// 		"logs": {
+	// 			"default": ["cyan"],
+	// 			"success": ["bold", "yellow"],
+	// 			"error": ["underline", "red"]
+	// 		},
+	// 		"line": {
+	// 			"default": ["cyan"],
+	// 			"error": ["red"],
+	// 			"warning": ["underline", "cyan"]
+	// 		}
+	// 	}
+	// }
 
 } catch (e) {
 	//it is okay if no override file is provided
