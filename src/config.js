@@ -16,7 +16,7 @@ function buildChalkFunction(config) {
 			var colorFunc = chalk;
 			//build up the chalk function
 			try {
-				config[outputMethod].forEach(function (style) {
+				config[outputMethod].forEach(function(style) {
 					colorFunc = colorFunc[style];
 				});
 				if (typeof colorFunc === 'undefined') {
@@ -38,32 +38,18 @@ var providedConfig = {};
 try {
 	// try to get the config file from root file of the application.
 	providedConfig = require('app-root-path').require('lmeconfig.json');
-
-	// mock provided config: comment out this block before releasing it to production.
-	// providedConfig = {
-	// 	"colors": {
-	// 		"logs": {
-	// 			"default": ["cyan"],
-	// 			"success": ["bold", "yellow"],
-	// 			"error": ["underline", "red"]
-	// 		},
-	// 		"line": {
-	// 			"default": ["cyan"],
-	// 			"error": ["red"],
-	// 			"warning": ["underline", "cyan"]
-	// 		}
-	// 	}
-	// }
+	// mock providedConfig here for test cases.
+	// providedConfig = {...}
 
 } catch (e) {
 	//it is okay if no override file is provided
 }
 
-if(!providedConfig.colors){
+if (!providedConfig.colors) {
 	providedConfig = {
 		colors: {
-			logs:{},
-			lines:{}
+			logs: {},
+			lines: {}
 		}
 	};
 }
