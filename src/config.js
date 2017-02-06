@@ -28,7 +28,6 @@ function buildChalkFunction(config) {
 			}
 		}
 	}
-	// console.log(chalkColors.default("fsd"));
 	return chalkColors;
 }
 
