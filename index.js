@@ -1,71 +1,40 @@
 'use strict';
 
-var logUtil = require('./logUtil');
-var linesUtil = require('./linesUtil');
-var config = require('./config');
+var config = require('./src/config');
+var loggingFunctions = require('./src/loggingFunctions');
 
-var m = {
-	//////////////////
-	// main methods //
-	//////////////////
-
-	// default
-	d: function() {
-		logUtil.logWithColor(config.colors.logs.default, arguments);
-	},
-	// success
-	s: function() {
-		logUtil.logWithColor(config.colors.logs.success, arguments);
-	},
-	// warning
-	w: function() {
-		logUtil.logWithColor(config.colors.logs.warning, arguments);
-	},
-	// err
-	e: function() {
-		logUtil.logWithColor(config.colors.logs.error, arguments);
-	},
-	// highlight
-	h: function() {
-		logUtil.logWithColor(config.colors.logs.highlight, arguments);
-	},
-	//info
-	i: function() {
-		logUtil.logWithColor(config.colors.logs.info, arguments);
-	},
-	//trace:
-	t: function() {
-		logUtil.logTraceWithColor(config.colors.logs.trace, arguments);
-	},
-
-	///////////
-	// lines //
-	///////////
-
-	// default
-	line: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w);
-	},
-	// default - another
-	dline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w);
-	},
-	// success
-	sline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.success);
-	},
-	// warning
-	wline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.warning);
-	},
-	// error
-	eline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.error);
-	},
-	// highlight
-	hline: function(char, length) {
-		linesUtil.logLine(char, length, this.e, this.w, config.colors.logs.highlight);
+function getLogLevel() {
+	var level = process.env.LOG_LEVEL;
+	if (level) {
+		level = config._logLevels[level.toLowerCase()].level;
 	}
-};
+	return level || config._logLevels.trace.level;
+}
+
+function meetsLogLevelRequirement(loggerLevel) {
+	return loggerLevel <= getLogLevel();
+}
+
+function createLogFunction(loggingFunctionParams) {
+	if (loggingFunctionParams.type === config._types.log) {
+		return function() {
+			if (meetsLogLevelRequirement(loggingFunctionParams.level)) {
+				loggingFunctionParams.logFunction(loggingFunctionParams.color, arguments);
+			}
+		};
+	} else if (loggingFunctionParams.type === config._types.line) {
+		return function(char, length) {
+			if (meetsLogLevelRequirement(loggingFunctionParams.level)) {
+				loggingFunctionParams.logFunction(char, length, m.e, m.w, loggingFunctionParams.color);
+			}
+		};
+	}
+
+}
+
+var m = {};
+loggingFunctions.forEach(function(loggingFunctionParams) {
+	m[loggingFunctionParams.functionName] = createLogFunction(loggingFunctionParams);
+});
 
 module.exports = m;

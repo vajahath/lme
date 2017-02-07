@@ -1,8 +1,15 @@
-// confirming config files are working correctly
+//////////////////
+// sample tests //
+//////////////////
+/**
+
+run:
+node test.js
+
+*/
+
 var lme = require('lme');
 
-// lmeconfig.json file is added with a different default color.
-// So, now the output should be in the new color.
 //////////////////
 // sample tests //
 //////////////////
@@ -62,4 +69,3 @@ lme.i('\nerror-ed outputs');
 testAllLineFunctions({ yu: 1 });
 
 lme.i('test finished');
-

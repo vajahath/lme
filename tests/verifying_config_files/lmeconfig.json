@@ -1,8 +1,22 @@
 {
 	"colors": {
 		"logs": {
-			"default": ["red"],
-			"error": ["bgRed", "cyan"]
+			"default": ["white"],
+			"success": ["bold", "green"],
+			"warning": ["bgYellow", "black"],
+			"error": ["bgRed", "white"],
+			"highlight": ["bgCyan", "black"],
+			"info": ["bold", "cyan"],
+			"trace": ["green"]
+		},
+		"lines": {
+			"default": ["white"],
+			"success": ["white"],
+			"warning": ["white"],
+			"error": ["yellow"],
+			"highlight": ["white"],
+			"info": ["white"],
+			"trace": ["white"]
 		}
 	}
 }

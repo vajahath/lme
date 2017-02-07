@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=stable)](https://travis-ci.org/vajahath/lme)
+[![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
 
 ![](https://raw.githubusercontent.com/vajahath/lme/stable/media/logo.png)
 
@@ -141,7 +141,7 @@ Below is an example `lmeconfig.json`:
 }
 ```
 This configuration will overwrite the default configurations.
-So, 
+So,
 
  - when you use `lme.d("hi")` next time, it will be in **red**.
  - when you use `lme.e("hi")` next time, text-color will be **cyan** and background-color will be **red**.
@@ -161,7 +161,7 @@ So,
 | `magenta`          | `bgCyan`             | `inverse`                               |
 | `cyan`             | `bgWhite`            | `hidden`                                |
 | `white`            | `bgBlue`             |`strikethrough` (not widely supported)   |
-| `gray`             | 
+| `gray`             |
 
 You can specify multiple styles for a text by mentioning it as an `Array`.
 Example:
@@ -178,7 +178,7 @@ Example:
 
 #### Properties and its jobs
 Below is the list of all properties and its jobs that the `lmeconfig.json` file can have.
-  
+
 | Properties               | what it does?    |
 | :----------------------- | :--------------- |
 | `colors.logs.default`    | styles `lme.d()` |
@@ -190,7 +190,7 @@ Below is the list of all properties and its jobs that the `lmeconfig.json` file 
 | `colors.logs.trace`      | styles `lme.t()` |
 
 ### Default configurations
-You can find default configurations in 
+You can find default configurations in
 ```bash
 ./node_modules/lme/lmeDefaultConfig.json
 ```
