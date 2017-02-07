@@ -2,7 +2,7 @@
 ##################
 node_modules/
 bower_components/
-
+.vscode/
 
 # Compiled source #
 ###################
@@ -43,5 +43,5 @@ ehthumbs.db
 Thumbs.db
 
 
-# lint: jshint config 
+# lint: jshint config
 .jshintrc

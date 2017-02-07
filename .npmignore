@@ -4,3 +4,7 @@ media/
 .travis.yml
 test.js
 tests/
+./vscode
+.editorconfig
+.eslintignore
+.gitignore
