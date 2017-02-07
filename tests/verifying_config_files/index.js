@@ -10,6 +10,16 @@ node test.js
 
 var lme = require('lme');
 
+//////////////////
+// sample tests //
+//////////////////
+/**
+
+run:
+node test.js
+
+*/
+
 function testAllLogFunctions() {
 	var args = Array.prototype.slice.call(arguments);
 	lme.d.apply(lme, args);
@@ -30,23 +40,25 @@ function testAllLineFunctions() {
 	lme.wline.apply(lme, args);
 	lme.eline.apply(lme, args);
 	lme.hline.apply(lme, args);
-	lme.iline.apply(lme, args);
-	lme.tline.apply(lme, args);
 }
 
 // objects
+lme.h('objects');
 testAllLogFunctions({ kity: 'is pinky', fluffy: 'is funny!' });
 
 // strings
+lme.h('strings');
 testAllLogFunctions('mango is sweet!');
 
 //Multiple Params
+lme.h('multiple params');
 testAllLogFunctions('mango is sweet!', { mango: 'sweet' });
 testAllLogFunctions('mango is sweet!', '!!!');
 testAllLogFunctions({ 'mango is': 'sweet' }, { 'mango is': 'sweet' });
 
 
 // lines
+lme.h('lines');
 testAllLineFunctions();
 testAllLineFunctions('*', 10);
 testAllLineFunctions('*', 110);

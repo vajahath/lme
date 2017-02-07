@@ -1,6 +1,6 @@
 {
   "name": "lme",
-  "version": "1.4.0-beta",
+  "version": "1.4.2",
   "description": "Simply and beautifully log to console.",
   "main": "index.js",
   "scripts": {
