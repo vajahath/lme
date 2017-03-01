@@ -64,6 +64,8 @@ lme.line() // used to draw lines
 lme.eline() // used to draw lines in error theme.
 lme.sline() // used to draw lines in success theme.
 ```
+> **Tip:** Use `lme` in every file without requiring it in each file by defining it globally. 
+> [Show me how!](https://github.com/vajahath/lme/wiki/Defining-lme-globally)
 
 # APIs
 
@@ -131,6 +133,7 @@ lme.wline("#", 50);
 - **[Custom Color Schemes](https://github.com/vajahath/lme/wiki/Custom-Color-Schemes):** Define your own color schems.
 - **[Adjust logging level](https://github.com/vajahath/lme/wiki/Adjust-Logging-Level):** Set environment variable to adjust logging levels.
 
+[Wiki](https://github.com/vajahath/lme/wiki)
 More configurations are on its way.<br>
 
 If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).
