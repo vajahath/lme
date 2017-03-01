@@ -133,7 +133,7 @@ lme.wline("#", 50);
 - **[Custom Color Schemes](https://github.com/vajahath/lme/wiki/Custom-Color-Schemes):** Define your own color schems.
 - **[Adjust logging level](https://github.com/vajahath/lme/wiki/Adjust-Logging-Level):** Set environment variable to adjust logging levels.
 
-[Wiki](https://github.com/vajahath/lme/wiki)
+[Wiki](https://github.com/vajahath/lme/wiki)<br>
 More configurations are on its way.<br>
 
 If you wish to file any feature/bugs, mention it on [issues](https://github.com/vajahath/lme/issues).
