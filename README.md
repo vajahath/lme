@@ -1,4 +1,4 @@
-> **lme 1.5 Release Candidate** <br> 
+> **lme 1.5 Release Candidate** <br>
 >  Actual release scheduled for 6th March 2017 :balloon:
 
 [![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
@@ -64,8 +64,6 @@ lme.line() // used to draw lines
 lme.eline() // used to draw lines in error theme.
 lme.sline() // used to draw lines in success theme.
 ```
-> **Tip:** Use `lme` in every file without requiring it in each file by defining it globally. 
-> [Show me how!](https://github.com/vajahath/lme/wiki/Defining-lme-globally)
 
 # APIs
 
