@@ -146,7 +146,7 @@ Thanks for using `lme`.
 
 #### Loves lme? :heart:
 tell your friends.. :two_men_holding_hands: <br>
-star this project :star:
+[star this project on Github](https://github.com/vajahath/lme) :star:
 
 ## Change log
 
