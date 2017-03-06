@@ -5,3 +5,6 @@ media/
 test.js
 tests/
 .vscode/
+.editorconfig
+.eslintignore
+.gitignore

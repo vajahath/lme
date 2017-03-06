@@ -12,4 +12,10 @@ rules:
   semi:
     - error
     - always
+  object-curly-spacing:
+    - error
+    - always
+  eol-last:
+    - error
+    - always
   no-console: 0
