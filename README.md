@@ -1,6 +1,3 @@
-> **lme 1.5 Release Candidate** <br>
->  Actual release scheduled for 6th March 2017 :balloon:
-
 [![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
 [![Known Vulnerabilities](https://snyk.io/test/npm/lme/badge.svg)](https://snyk.io/test/npm/lme)
 
