@@ -56,4 +56,12 @@ lme.i('\nerror-ed outputs');
 
 testAllLineFunctions({ yu: 1 });
 
+var e = new Error('oh noo!');
+testAllLogFunctions(e, '!!!');
+testAllLogFunctions(e);
+
+lme.wline();
+lme.e(e);
+console.log(e); // not getting this kind of err above..
+
 lme.i('test finished');
