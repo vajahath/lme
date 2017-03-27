@@ -21,6 +21,8 @@ lme.d("hello world");
 >  **-** Stability and performance improvements.
 
 ## Why `lme` *( logme )*
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/lme.svg)](https://greenkeeper.io/)
 - Clean and semantically focused.
 - Consistent design for errors, warnings, successes etc.
 - Simpler to use than `console.log()` or even `console.log(chalk.red("hi"));`
