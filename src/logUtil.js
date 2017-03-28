@@ -20,7 +20,7 @@ function logMessage(colorFunc, msgArgs, consoleFunc) {
 	var outputArgs = [];
 
 	msgArgs.forEach(function(arg) {
-		if (typeof(arg) == 'object') {
+		if ((typeof(arg) === 'object')&& !(arg instanceof Error)) {
 			outputArgs.push('\n' + JSON.stringify(arg, null, 2));
 		} else {
 			outputArgs.push(arg);

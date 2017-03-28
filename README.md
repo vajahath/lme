@@ -18,7 +18,7 @@ lme.d("hello world");
 >  **-** Define your own [color schemes for lines](https://github.com/vajahath/lme/wiki/Custom-Color-Schemes) <br>
 >  **-** Define your own [color schemes for texts](https://github.com/vajahath/lme/wiki/Custom-Color-Schemes) <br>
 >  **-** Multiple argumnets support: _`lme.s("hi", "hello")`_ <br>
->  **-** Stability and performance improvements.
+>  **-** Stability, performance improvements and Bug fixes.
 
 ## Why `lme` *( logme )*
 
@@ -152,6 +152,8 @@ tell your friends.. :two_men_holding_hands: <br>
 
 ## Change log
 
+- **v1.5.1** (27th March 2017)
+    - IMPORTANT bug fix: addressing issue with displaying instances of `Error` class. ([#30](https://github.com/vajahath/lme/issues/30)). (Highly recommended to update to this version)
 - **v1.5.0** (6th March 2017)
     - Support for [custom separate color schemes for line and text](https://github.com/vajahath/lme/wiki/Custom-Color-Schemes).
     - [Adjust log level](https://github.com/vajahath/lme/wiki/Adjust-Logging-Level) with environment variable.
