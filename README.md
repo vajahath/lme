@@ -1,3 +1,7 @@
+# lme
+
+Simply and beautifully log to console.
+
 [![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
 [![Known Vulnerabilities](https://snyk.io/test/npm/lme/badge.svg)](https://snyk.io/test/npm/lme)
 [![npm](https://img.shields.io/npm/dt/lme.svg)](https://www.npmjs.com/package/lme)
