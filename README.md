@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/vajahath/lme.svg?branch=master)](https://travis-ci.org/vajahath/lme)
 [![Known Vulnerabilities](https://snyk.io/test/npm/lme/badge.svg)](https://snyk.io/test/npm/lme)
+[![npm](https://img.shields.io/npm/dt/lme.svg)](https://www.npmjs.com/package/lme)
+[![npm](https://img.shields.io/npm/v/lme.svg)](https://www.npmjs.com/package/lme)
 
 ![](https://raw.githubusercontent.com/vajahath/lme/stable/media/logo.png)
 
@@ -152,6 +154,8 @@ tell your friends.. :two_men_holding_hands: <br>
 
 ## Change log
 
+- **v1.5.2** (27th March 2017)
+    - Adds extra badges, docs update.
 - **v1.5.1** (27th March 2017)
     - IMPORTANT bug fix: addressing issue with displaying instances of `Error` class. ([#30](https://github.com/vajahath/lme/issues/30)). (Highly recommended to update to this version)
 - **v1.5.0** (6th March 2017)
