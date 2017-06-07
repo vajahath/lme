@@ -154,7 +154,7 @@ tell your friends.. :two_men_holding_hands: <br>
 
 ## Change log
 
-- **v1.5.2** (27th March 2017)
+- **v1.5.2** (7th June 2017)
     - Adds extra badges, docs update.
 - **v1.5.1** (27th March 2017)
     - IMPORTANT bug fix: addressing issue with displaying instances of `Error` class. ([#30](https://github.com/vajahath/lme/issues/30)). (Highly recommended to update to this version)
