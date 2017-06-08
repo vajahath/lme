@@ -6,6 +6,7 @@ Simply and beautifully log to console.
 [![Known Vulnerabilities](https://snyk.io/test/npm/lme/badge.svg)](https://snyk.io/test/npm/lme)
 [![npm](https://img.shields.io/npm/dt/lme.svg)](https://www.npmjs.com/package/lme)
 [![npm](https://img.shields.io/npm/v/lme.svg)](https://www.npmjs.com/package/lme)
+[![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/lme-logger/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ![](https://raw.githubusercontent.com/vajahath/lme/stable/media/logo.png)
 
@@ -158,8 +159,9 @@ tell your friends.. :two_men_holding_hands: <br>
 
 ## Change log
 
-- **v1.5.2** (7th June 2017)
+- **v1.5.2, 1.5.3** (8th June 2017)
     - Adds extra badges, docs update.
+	- Gitter chat
 - **v1.5.1** (27th March 2017)
     - IMPORTANT bug fix: addressing issue with displaying instances of `Error` class. ([#30](https://github.com/vajahath/lme/issues/30)). (Highly recommended to update to this version)
 - **v1.5.0** (6th March 2017)
