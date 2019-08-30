@@ -35,6 +35,6 @@
 		"Aman Mittal (https://github.com/amandeepmittal)"
 	],
 	"devDependencies": {
-		"eslint": "^4.1.0"
+		"eslint": "^6.3.0"
 	}
 }
